@@ -1,0 +1,4407 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.redborder.com/documentation/manager/resources/ch11_model_sharing/">
+      
+      
+        <link rel="prev" href="../ch10_use_examples/">
+      
+      
+        <link rel="next" href="../ch12_syslog_incidents_logs/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/redborder-logo-white-crop-u4409.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Sharing Database Models - Redborder NDR Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sharing-database-models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Redborder NDR Documentation" class="md-header__button md-logo" aria-label="Redborder NDR Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/redborder-logo-white-crop-u4409.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redborder NDR Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sharing Database Models
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../es/documentation/manager/resources/ch11_model_sharing/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/redBorder/redborder-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Redborder/redborder-documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Redborder NDR
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../release_notes/25_01/" class="md-tabs__link">
+          
+  
+  Release notes
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Redborder NDR Documentation" class="md-nav__button md-logo" aria-label="Redborder NDR Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/redborder-logo-white-crop-u4409.png" alt="logo">
+
+    </a>
+    Redborder NDR Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/redBorder/redborder-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Redborder/redborder-documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redborder NDR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Manager
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Manager
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Redborder Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/ch02_installation_on_linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation on Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/ch03_sign_in_to_redborder_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sign In to Redborder Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/ch04_interface_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interface Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4" id="__nav_2_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dashboards
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Dashboards
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/ch05_overview_and_default_dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview and Default Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/ch06_dashboards_menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboards Menu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/ch07_dashboards_actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboard Actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/ch08_widgets_menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets Menu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/ch09_widgets_actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets Actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Incidents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Incidents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../incidents/ch01_incidents_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incidents List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../incidents/ch05_incident_details/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incident Details
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../incidents/ch21_incident_stats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incident Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_6" id="__nav_2_1_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Apps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Apps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch07_apps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apps Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch08_apps_menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apps Menu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch09_views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apps Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch10_anomalies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anomaly Detection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch11_filters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch12_ip_search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IP search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch13_create_objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_7" id="__nav_2_1_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reports
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Reports
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/ch09_creation_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/ch10_reports_history/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Report History
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_8" id="__nav_2_1_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sensors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            Sensors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sensors/ch03_sensors_view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sensors View
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sensors/ch04_policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intrusion Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_9" id="__nav_2_1_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch01_alarms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alarms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch02_audits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch04_cluster_settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cluster Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch05_general_settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch06_correlation_engine_rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Correlation Engine Rules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch07_monitor_categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitor Categories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch09_mitre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mitre matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch10_licenses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licenses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch11_lookup_sources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lookup Sources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch12_objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch13_object_types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Object Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch14_overlay_maps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overlay Maps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch17_platform_alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch18_rule_versions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rule Versions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch19_users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch20_worker_and_job_queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Worker and Job Queue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_10" id="__nav_2_1_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Integrations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/glpi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GLPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/otrs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OTRS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/rsyslog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syslog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/sso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Single Sign On
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/trend_micro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trend Micro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/zabbix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zabbix Integration Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_11" id="__nav_2_1_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch10_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Redborder's API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch10_use_examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example queries to the API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sharing Database Models
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Sharing Database Models
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Sensors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Sensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listing-the-sensors-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing the Sensors Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-sensor-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Sensor Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meraki-sensor-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meraki Sensor Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mse-sensor-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSE Sensor Creation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MSE Sensor Creation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listing-mse-sensors-in-a-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing MSE Sensors in a Domain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Deletion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain Modification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modification-of-flow-mse-and-meraki-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modification of Flow, MSE, and Meraki Sensors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overwriting-a-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overwriting a Domain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-access-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Access Points
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Access Points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listing-the-access-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing the Access Points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-access-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Access Points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-access-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifying Access Points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-domains-access-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding Domain's Access Points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-points-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Points deletion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-listing" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Listing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-key-renewal" class="md-nav__link">
+    <span class="md-ellipsis">
+      API key Renewal
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch12_syslog_incidents_logs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syslog Incident Logs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Intrusion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Intrusion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intrusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Redborder Intrusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intrusion/installation/ch02_installation_on_linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation on Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Flowgate
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Flowgate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../flowgate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Redborder Flowgate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../flowgate/installation/ch02_installation_on_linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation on Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Use Cases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Use Cases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use_cases/ch09_IP_tracking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tracking an IP with Redborder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use_cases/ch09_detect_brute_force/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSH Brute-Force Attacks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use_cases/ch09_detect_eternalblue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Detecting an Eternalblue Attack with Redborder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use_cases/ch09_ssh_brute_force_alert/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Brute force authentication attack alert
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use_cases/ch09_untangle_remote_info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reviewing remote information from Untangle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Release notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Release notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release_notes/25_01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release 25.01
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Sensors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Sensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listing-the-sensors-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing the Sensors Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-sensor-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Sensor Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meraki-sensor-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meraki Sensor Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mse-sensor-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSE Sensor Creation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MSE Sensor Creation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listing-mse-sensors-in-a-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing MSE Sensors in a Domain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Deletion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain Modification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modification-of-flow-mse-and-meraki-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modification of Flow, MSE, and Meraki Sensors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overwriting-a-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overwriting a Domain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-access-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Access Points
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Access Points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listing-the-access-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing the Access Points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-access-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Access Points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-access-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifying Access Points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-domains-access-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding Domain's Access Points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-points-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Points deletion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-listing" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Listing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-key-renewal" class="md-nav__link">
+    <span class="md-ellipsis">
+      API key Renewal
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/redBorder/redborder-documentation/edit/master/docs/documentation/manager/resources/ch11_model_sharing.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="sharing-database-models">Sharing Database Models<a class="headerlink" href="#sharing-database-models" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Keep in mind...</p>
+<p>Every request that returns a <em>JSON</em> response body will have a <code>query</code> field with a boolean value. This value represents the state of the query, so if it is set to <code>true</code> it means the query was successful and if it is set to <code>false</code> it means the query was not successful.</p>
+<p>This value will always be found in the root <em>JSON</em> response object and will always be a sibling of the response.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Values replacement</p>
+<p>To indicate the values that should be replaced as indicated in each case, the data name to be replaced is enclosed between <code>&lt;</code> and <code>&gt;</code> symbols.</p>
+<p>For example, to specify that <code>sensor_uuid</code> should be replaced with its own value or the desired value, you would indicate it by enclosing the name between these symbols: <code>&lt;sensor_uuid&gt;</code>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Management permissions (or read permissions to list) are required to create, modify, overwrite, or delete sensors, domains, access points, or any other model in the database. If these permissions are missing for any of these operations, the HTTP status code <code>401 Unauthorized</code> will be returned in the <em>API</em> response.</p>
+<p>If a sensor, domain, access point, or any other model in the database that does not exist is specified in the request, the HTTP status code <code>404 Not Found</code> will be returned in the <em>API</em> response.</p>
+</div>
+<h2 id="working-with-sensors">Working with Sensors<a class="headerlink" href="#working-with-sensors" title="Permanent link">&para;</a></h2>
+<h3 id="listing-the-sensors-tree">Listing the Sensors Tree<a class="headerlink" href="#listing-the-sensors-tree" title="Permanent link">&para;</a></h3>
+<p>To list a sensor and all its subordinate sensors, make a <code>GET</code> request to the following URL:
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/&lt;sensor_uuid&gt;/tree?auth_token=&lt;API_key&gt;
+</code></pre></div></p>
+<p>Where <code>sensor_uuid</code> should be the UUID of the desired sensor tree. If you want to list all sensors of the user's <em>top</em> domain and their subordinate sensors, you can make a <code>GET</code> request to the following URL:
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/tree?auth_token=&lt;API_key&gt;
+</code></pre></div></p>
+<div class="admonition example">
+<p class="admonition-title">Example of <code>GET</code> request to list all sensors</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--insecure<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;https://&lt;manager_IP&gt;/api/v1/sensors/tree?auth_token=&lt;API_key&gt;&#39;</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;content-type: application/json&#39;</span>
+</code></pre></div>
+</div>
+<p>If the request is successful, the response will contain the requested sensor tree and the <code>query</code> field will be set to <code>true</code>. Currently, only <em>JSON</em> format is supported for requests and responses.</p>
+<p>Expand the following tab to see a complete execution example:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: GET
+
+URI: https://&lt;manager_IP&gt;/api/v1/sensors/8726017729975087448/tree?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+  &quot;query&quot;: true,
+  &quot;sensor&quot;: {
+    &quot;id&quot;: 492,
+    &quot;name&quot;: &quot;Test&quot;,
+    &quot;ip&quot;: null,
+    &quot;latitude&quot;: null,
+    &quot;longitude&quot;: null,
+    &quot;is_deleted&quot;: false,
+    &quot;applied_at&quot;: null,
+    &quot;type&quot;: 1,
+    &quot;real_parent_id&quot;: null,
+    &quot;group_id&quot;: null,
+    &quot;binding_id&quot;: null,
+    &quot;need_apply&quot;: false,
+    &quot;applying&quot;: false,
+    &quot;property&quot;: {
+      &quot;path&quot;: &quot;&quot;
+    },
+    &quot;domain_type&quot;: 1,
+    &quot;unassigned&quot;: false,
+    &quot;policy_id&quot;: null,
+    &quot;reputation_policy_id&quot;: null,
+    &quot;need_reputation_apply&quot;: false,
+    &quot;uuid&quot;: &quot;697893457705749905&quot;,
+    &quot;children&quot;: [
+      {
+        &quot;id&quot;: 852,
+        &quot;name&quot;: &quot;Override_brother&quot;,
+        &quot;ip&quot;: null,
+        &quot;latitude&quot;: null,
+        &quot;longitude&quot;: null,
+        &quot;is_deleted&quot;: false,
+        &quot;applied_at&quot;: null,
+        &quot;type&quot;: 1,
+        &quot;real_parent_id&quot;: null,
+        &quot;group_id&quot;: null,
+        &quot;binding_id&quot;: null,
+        &quot;need_apply&quot;: false,
+        &quot;applying&quot;: false,
+        &quot;property&quot;: {},
+        &quot;domain_type&quot;: 1,
+        &quot;unassigned&quot;: false,
+        &quot;policy_id&quot;: null,
+        &quot;reputation_policy_id&quot;: null,
+        &quot;need_reputation_apply&quot;: false,
+        &quot;uuid&quot;: &quot;7106963634872672634&quot;,
+        &quot;children&quot;: []
+      },
+      {
+        &quot;id&quot;: 847,
+        &quot;name&quot;: &quot;Override_parent&quot;,
+        &quot;ip&quot;: null,
+        &quot;latitude&quot;: null,
+        &quot;longitude&quot;: null,
+        &quot;is_deleted&quot;: false,
+        &quot;applied_at&quot;: null,
+        &quot;type&quot;: 1,
+        &quot;real_parent_id&quot;: null,
+        &quot;group_id&quot;: null,
+        &quot;binding_id&quot;: null,
+        &quot;need_apply&quot;: false,
+        &quot;applying&quot;: false,
+        &quot;property&quot;: {},
+        &quot;domain_type&quot;: 1,
+        &quot;unassigned&quot;: false,
+        &quot;policy_id&quot;: null,
+        &quot;reputation_policy_id&quot;: null,
+        &quot;need_reputation_apply&quot;: false,
+        &quot;uuid&quot;: &quot;6575077023887022161&quot;,
+        &quot;children&quot;: [
+          {
+            &quot;id&quot;: 848,
+            &quot;name&quot;: &quot;Override_child&quot;,
+            &quot;ip&quot;: null,
+            &quot;latitude&quot;: null,
+            &quot;longitude&quot;: null,
+            &quot;is_deleted&quot;: false,
+            &quot;applied_at&quot;: null,
+            &quot;type&quot;: 1,
+            &quot;real_parent_id&quot;: null,
+            &quot;group_id&quot;: null,
+            &quot;binding_id&quot;: null,
+            &quot;need_apply&quot;: false,
+            &quot;applying&quot;: false,
+            &quot;property&quot;: {},
+            &quot;domain_type&quot;: 1,
+            &quot;unassigned&quot;: false,
+            &quot;policy_id&quot;: null,
+            &quot;reputation_policy_id&quot;: null,
+            &quot;need_reputation_apply&quot;: false,
+            &quot;uuid&quot;: &quot;7137236833163733936&quot;,
+            &quot;children&quot;: []
+          },
+          {
+            &quot;id&quot;: 849,
+            &quot;name&quot;: &quot;Override_child_2&quot;,
+            &quot;ip&quot;: null,
+            &quot;latitude&quot;: null,
+            &quot;longitude&quot;: null,
+            &quot;is_deleted&quot;: false,
+            &quot;applied_at&quot;: null,
+            &quot;type&quot;: 1,
+            &quot;real_parent_id&quot;: null,
+            &quot;group_id&quot;: null,
+            &quot;binding_id&quot;: null,
+            &quot;need_apply&quot;: false,
+            &quot;applying&quot;: false,
+            &quot;property&quot;: {},
+            &quot;domain_type&quot;: 1,
+            &quot;unassigned&quot;: false,
+            &quot;policy_id&quot;: null,
+            &quot;reputation_policy_id&quot;: null,
+            &quot;need_reputation_apply&quot;: false,
+            &quot;uuid&quot;: &quot;4178223226747106768&quot;,
+            &quot;children&quot;: [
+              {
+                &quot;id&quot;: 851,
+                &quot;name&quot;: &quot;Override_grandson_2&quot;,
+                &quot;ip&quot;: null,
+                &quot;latitude&quot;: null,
+                &quot;longitude&quot;: null,
+                &quot;is_deleted&quot;: false,
+                &quot;applied_at&quot;: null,
+                &quot;type&quot;: 1,
+                &quot;real_parent_id&quot;: null,
+                &quot;group_id&quot;: null,
+                &quot;binding_id&quot;: null,
+                &quot;need_apply&quot;: false,
+                &quot;applying&quot;: false,
+                &quot;property&quot;: {},
+                &quot;domain_type&quot;: 101,
+                &quot;unassigned&quot;: false,
+                &quot;policy_id&quot;: null,
+                &quot;reputation_policy_id&quot;: null,
+                &quot;need_reputation_apply&quot;: false,
+                &quot;uuid&quot;: &quot;7549459708256671519&quot;,
+                &quot;access_points&quot;: [],
+                &quot;children&quot;: []
+              },
+              {
+                &quot;id&quot;: 850,
+                &quot;name&quot;: &quot;Override_grandson_1&quot;,
+                &quot;ip&quot;: null,
+                &quot;latitude&quot;: null,
+                &quot;longitude&quot;: null,
+                &quot;is_deleted&quot;: false,
+                &quot;applied_at&quot;: null,
+                &quot;type&quot;: 1,
+                &quot;real_parent_id&quot;: null,
+                &quot;group_id&quot;: null,
+                &quot;binding_id&quot;: null,
+                &quot;need_apply&quot;: false,
+                &quot;applying&quot;: false,
+                &quot;property&quot;: {},
+                &quot;domain_type&quot;: 1,
+                &quot;unassigned&quot;: false,
+                &quot;policy_id&quot;: null,
+                &quot;reputation_policy_id&quot;: null,
+                &quot;need_reputation_apply&quot;: false,
+                &quot;uuid&quot;: &quot;8126434584577941831&quot;,
+                &quot;children&quot;: []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+</code></pre></div>
+</details>
+<h3 id="domain-creation">Domain Creation<a class="headerlink" href="#domain-creation" title="Permanent link">&para;</a></h3>
+<p>New domains can be created by making a <code>POST</code> request to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/domain?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>A <em>JSON</em> payload must be sent along with this request. The allowed parameters for the payload are:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uuid</td>
+<td>UUID that the new domain will receive upon creation. It must not be in use by any existing domain. If not specified, a random unused one will be assigned.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>(Required) Name of the new domain</td>
+</tr>
+<tr>
+<td>domain_type</td>
+<td>Number indicating the type of domain. The default type is generic (1). You can see the available types later on this page.</td>
+</tr>
+<tr>
+<td>parent_uuid</td>
+<td>UUID of the parent. By default, it will be the UUID of the user's <em>top</em> domain.</td>
+</tr>
+<tr>
+<td>mac_hasing_salt</td>
+<td>MAC hash string for a <strong>Service Provider</strong> domain. If the domain type is not equal to 6 (Service Provider), this parameter will be ignored.</td>
+</tr>
+<tr>
+<td>visualization_range</td>
+<td>Limits the days users can view the data of an organization. If the domain type is not equal to 2 (Organization), this parameter will be ignored.</td>
+</tr>
+<tr>
+<td>megabytes_limit</td>
+<td>Limits the megabytes of storage for the data of an organization. If the domain type is not equal to 2 (Organization), this parameter will be ignored.</td>
+</tr>
+</tbody>
+</table>
+<p>To see the different values of <code>domain_type</code>, expand the tab:</p>
+<details class="note">
+<summary>Values for the <code>domain_type</code> field</summary>
+<ul>
+<li>"<code>1</code>" = Generic</li>
+<li>"<code>2</code>" = Organization</li>
+<li>"<code>3</code>" = Market</li>
+<li>"<code>4</code>" = Campus</li>
+<li>"<code>5</code>" = Building</li>
+<li>"<code>6</code>" = Service Provider</li>
+<li>"<code>7</code>" = Deployment</li>
+<li>"<code>101</code>" = Floor</li>
+</ul>
+</details>
+<p>If the request is successful, the <em>JSON</em> response will describe the <strong>domain</strong> created and the <code>query</code> field will be set to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: POST
+
+URL: https://&lt;manager_IP&gt;/api/v1/sensors/domain?auth_token=&lt;API_key&gt;
+
+Payload:
+
+{
+  &quot;name&quot;: &quot;new_domain&quot;
+}
+</code></pre></div>
+<p><strong>Bash execution</strong>:
+<div class="highlight"><pre><span></span><code><span class="w">  </span>curl<span class="w"> </span>--insecure<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;https://&lt;manager_IP&gt;/api/v1/sensors/domain?auth_token=&lt;API_key&gt;&#39;</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;content-type: application/json&#39;</span><span class="w"> </span>-d<span class="w"> </span>@&lt;create_domain.json&gt;
+</code></pre></div>
+where <em>create_domain.json</em> is:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;New Domain&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+  &quot;query&quot;: true,
+  &quot;sensor&quot;: {
+    &quot;id&quot;: 893,
+    &quot;name&quot;: &quot;new_domain&quot;,
+    &quot;type&quot;: 1,
+    &quot;domain_type&quot;: 2,
+    &quot;uuid&quot;: &quot;242113467595288081&quot;
+  }
+}
+</code></pre></div>
+</details>
+<p>In the <em>API</em> response, there is a field called <code>type</code> that indicates the <strong>type of sensor created</strong>. To see the different values of <code>type</code>, expand the tab:</p>
+<details class="note">
+<summary>Values for the <code>type</code> field</summary>
+<ul>
+<li>"<code>1</code>" = Domain</li>
+<li>"<code>2</code>" = IPS</li>
+<li>"<code>3</code>" = IPS_GROUP</li>
+<li>"<code>4</code>" = IPS_BINDING</li>
+<li>"<code>5</code>" = FLOW</li>
+</ul>
+</details>
+<h3 id="flow-sensor-creation">Flow Sensor Creation<a class="headerlink" href="#flow-sensor-creation" title="Permanent link">&para;</a></h3>
+<p>New sensors can be created by making a <code>POST</code> request to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/flow?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>A <em>JSON</em> payload must be sent along with this request. The allowed parameters for the payload are:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ip</td>
+<td>(Required) IP address of the sensor.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>(Required) Name for the sensor.</td>
+</tr>
+<tr>
+<td>parent_uuid</td>
+<td>Specifies the UUID of the parent sensor. If none is specified, the UUID of the <em>root</em> sensor will be used.</td>
+</tr>
+<tr>
+<td>snmp_community</td>
+<td>Specifies the name of the SNMP community.</td>
+</tr>
+<tr>
+<td>snmp_version</td>
+<td>Specifies the version of SNMP to use. Currently, <code>1</code> and <code>2c</code> are supported.</td>
+</tr>
+<tr>
+<td>spanport</td>
+<td>Enable or disable the SPAN port.</td>
+</tr>
+<tr>
+<td>nmsp</td>
+<td>Enable or disable NMSP.</td>
+</tr>
+<tr>
+<td>nmsp_wireless_health</td>
+<td>Enable or disable NMSP wireless health check.</td>
+</tr>
+<tr>
+<td>nmsp_client_stats</td>
+<td>Enable or disable NMSP client statistics.</td>
+</tr>
+<tr>
+<td>dns_ptr_client</td>
+<td>Enable or disable DNS client resolution.</td>
+</tr>
+<tr>
+<td>dns_ptr_target</td>
+<td>Enable or disable DNS target resolution.</td>
+</tr>
+<tr>
+<td>homenets</td>
+<td>Array of one or more values indicating the 'home networks' for the sensor. The syntax for this field is explained later.</td>
+</tr>
+<tr>
+<td>router_macs</td>
+<td>Array of one or more values indicating the router MAC addresses for this sensor. The syntax for this field is explained later.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Note...</p>
+<p>Fields that enable or disable a feature have two available values:</p>
+<ul>
+<li>"<code>1</code>" = enable</li>
+<li>"<code>0</code>" = disable</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Syntax for <code>homenets</code> field</p>
+<div class="highlight"><pre><span></span><code>{
+  ...
+  &quot;homenets&quot;: [
+    { &quot;name&quot; : &quot;Homenet1&quot;, &quot;value&quot; : &quot;192.168.1.0/24&quot; },
+    { &quot;name&quot; : &quot;Homenet2&quot;, &quot;value&quot; : &quot;192.168.2.0/24&quot; },
+    ...
+  ]
+}
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Syntax for <code>router_macs</code> field</p>
+<div class="highlight"><pre><span></span><code>{
+  ...
+  &quot;router_macs&quot;: [
+    { &quot;name&quot; : &quot;Interface1&quot;, &quot;value&quot; : &quot;aa:bb:cc:dd:ee:ff&quot; },
+    { &quot;name&quot; : &quot;Interface2&quot;, &quot;value&quot; : &quot;ff:bb:aa:cc:bb:dd&quot; },
+    ...
+  ]
+}
+</code></pre></div>
+</div>
+<p>If the request is successful, the <em>JSON</em> response will describe the <strong>sensor</strong> created and the <code>query</code> field will be set to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: POST
+
+URL: https://&lt;manager_IP&gt;/api/v1/sensors/flow?auth_token=&lt;API_key&gt;
+
+Payload:
+
+{
+  &quot;name&quot;: &quot;test_flow&quot;,
+  &quot;parent_uuid&quot;: &quot;7549459708256671519&quot;,
+  &quot;ip&quot;: &quot;10.0.2.10&quot;
+}
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+  &quot;query&quot;: true,
+  &quot;sensor&quot;: {
+    &quot;id&quot;: 901,
+    &quot;uuid&quot;: &quot;894798882298873783&quot;,
+    &quot;name&quot;: &quot;test_flow&quot;,
+    &quot;ip&quot;: &quot;10.0.2.10&quot;
+  }
+}
+</code></pre></div>
+</details>
+<h3 id="meraki-sensor-creation">Meraki Sensor Creation<a class="headerlink" href="#meraki-sensor-creation" title="Permanent link">&para;</a></h3>
+<p>New sensors can be created by making a <code>POST</code> request to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/meraki?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>A <em>JSON</em> payload must be sent along with this request. The allowed parameters for the payload are:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ip</td>
+<td>(Required) IP address/Domain of the Meraki sensor.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>(Required) Name for the sensor.</td>
+</tr>
+<tr>
+<td>parent_uuid</td>
+<td>Specifies the UUID of the parent sensor. If none is specified, the UUID of the <em>root</em> sensor will be used.</td>
+</tr>
+<tr>
+<td>meraki_validator</td>
+<td>Specifies the validator of the sensor.</td>
+</tr>
+<tr>
+<td>snmp_community</td>
+<td>Specifies the name of the SNMP community.</td>
+</tr>
+<tr>
+<td>snmp_version</td>
+<td>Specifies the version of SNMP to use. Currently, <code>1</code> and <code>2c</code> are supported.</td>
+</tr>
+</tbody>
+</table>
+<p>If the request is successful, the <em>JSON</em> response will describe the <strong>sensor</strong> created and the <code>query</code> field will be set to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: POST
+
+URL: https://&lt;manager_IP&gt;/api/v1/sensors/meraki?auth_token=&lt;API_key&gt;
+
+Payload:
+
+{ 
+  &quot;name&quot;: &quot;test_meraki&quot;,
+  &quot;parent_uuid&quot;: &quot;6396049722605916538&quot;,
+  &quot;ip&quot;: &quot;10.0.2.10&quot;,
+  &quot;meraki_validator&quot;: &quot;validator_frase&quot; 
+}
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+  &quot;query&quot;: true,
+  &quot;sensor&quot;: {
+    &quot;id&quot;: 1501,
+    &quot;uuid&quot;: &quot;4486950571500705295&quot;,
+    &quot;name&quot;: &quot;test_meraki&quot;,
+    &quot;ip&quot;: &quot;10.0.2.10&quot;,
+    &quot;meraki_validator&quot;: &quot;validator_frase&quot;,
+    &quot;secret&quot;: &quot;52bcf9fa1666053ecd5d0e0c8528627a43ece6be&quot;
+  }
+}
+</code></pre></div>
+</details>
+<h3 id="mse-sensor-creation">MSE Sensor Creation<a class="headerlink" href="#mse-sensor-creation" title="Permanent link">&para;</a></h3>
+<p>New sensors can be created by making a <code>POST</code> request to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/mse?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>A <em>JSON</em> payload must be sent along with this request. The allowed parameters for the payload are:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stream</td>
+<td>(Required) Name of the MSE stream.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>(Required) Name for the MSE sensor.</td>
+</tr>
+<tr>
+<td>parent_uuid</td>
+<td>Specifies the UUID of the parent sensor. If none is specified, the UUID of the <em>root</em> sensor will be used.</td>
+</tr>
+<tr>
+<td>mse_version</td>
+<td>Specifies the version of the sensor.</td>
+</tr>
+<tr>
+<td>snmp_community</td>
+<td>Specifies the name of the SNMP community.</td>
+</tr>
+<tr>
+<td>snmp_version</td>
+<td>Specifies the version of SNMP to use. Currently, <code>1</code> and <code>2c</code> are supported.</td>
+</tr>
+<tr>
+<td>homenets</td>
+<td>Array of one or more values indicating the 'home networks' for the sensor. The syntax for this field should be the same as explained in the <a href="/es/manager/redborder_api/ch11_model_sharing/#creacion-de-sensores-de-flow">Creation of Flow sensors</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>If the request is successful, the <em>JSON</em> response will describe the <strong>sensor</strong> created and the <code>query</code> field will be set to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: POST
+
+URL: https://&lt;manager_IP&gt;/api/v1/sensors/mse?auth_token=&lt;API_key&gt;
+
+Payload:
+
+{ 
+  &quot;name&quot;: &quot;test_mse&quot;,
+  &quot;parent_uuid&quot;: &quot;7549459708256671519&quot;,
+  &quot;stream&quot;: &quot;StreamB&quot;,
+  &quot;mse_version&quot;: &quot;8&quot;
+}
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+  &quot;query&quot;: true,
+  &quot;sensor&quot;: {
+    &quot;id&quot;: 902,
+    &quot;uuid&quot;: &quot;4110689521083459108&quot;,
+    &quot;name&quot;: &quot;test_mse&quot;,
+    &quot;stream&quot;: &quot;StreamB&quot;,
+    &quot;mse_version&quot;: &quot;8&quot;
+  }
+}
+</code></pre></div>
+</details>
+<h4 id="listing-mse-sensors-in-a-domain">Listing MSE Sensors in a Domain<a class="headerlink" href="#listing-mse-sensors-in-a-domain" title="Permanent link">&para;</a></h4>
+<p>MSE sensors in a domain can be listed by making a <code>GET</code> request to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/&lt;sensor_uuid&gt;/mse?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>Where <code>sensor_uuid</code> should be the UUID of the domain from which you want to retrieve the sensors.</p>
+<p>If the request is successful, the <em>JSON</em> response will describe the <strong>MSE</strong> sensors found and the <code>query</code> field will be set to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: GET
+
+URL: https://&lt;manager_IP&gt;/api/v1/sensors/8726017729975087448/mse?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+    &quot;query&quot;: true,
+    &quot;mse&quot;: [
+      {
+        &quot;id&quot;: 854,
+        &quot;name&quot;: &quot;TestMSE&quot;,
+        &quot;ip&quot;: &quot;0.0.0.0&quot;,
+        &quot;latitude&quot;: null,
+        &quot;longitude&quot;: null,
+        &quot;is_deleted&quot;: false,
+        &quot;applied_at&quot;: null,
+        &quot;type&quot;: 8,
+        &quot;real_parent_id&quot;: null,
+        &quot;group_id&quot;: null,
+        &quot;binding_id&quot;: null,
+        &quot;need_apply&quot;: false,
+        &quot;applying&quot;: false,
+        &quot;property&quot;: {},
+        &quot;domain_type&quot;: 1,
+        &quot;unassigned&quot;: false,
+        &quot;policy_id&quot;: null,
+        &quot;reputation_policy_id&quot;: null,
+        &quot;need_reputation_apply&quot;: false,
+        &quot;uuid&quot;: &quot;4297150382216182536&quot;
+      }
+    ]
+  }
+</code></pre></div>
+</details>
+<h3 id="sensor-deletion">Sensor Deletion<a class="headerlink" href="#sensor-deletion" title="Permanent link">&para;</a></h3>
+<p>The user can specify which sensor to delete by providing the UUID of that sensor in a <code>DELETE</code> request to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/&lt;uuid&gt;/?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>Where <code>uuid</code> should be replaced with the UUID of the sensor to be deleted.</p>
+<p>If the request is successful, the specified sensor and all its subordinate sensors will be deleted, and the <code>query</code> field will be set to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: DELETE
+
+URL: https://&lt;manager_IP&gt;/api/v1/sensors/8726017729975087448?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+</code></pre></div>
+</details>
+<h3 id="domain-modification">Domain Modification<a class="headerlink" href="#domain-modification" title="Permanent link">&para;</a></h3>
+<p>To update a domain, use the same parameters as in <a href="/manager/redborder_api/ch11_model_sharing/#domain-creation">Domain Creation</a>. You can update the name, type, domain type, UUID, and <em>MAC Hashing salt</em> (only for Service Providers). The payload must be in <em>JSON</em> format and the <code>PATCH</code> request should be made to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/&lt;sensor_uuid&gt;/?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>Where <code>sensor_uuid</code> should be replaced with the UUID of the domain to be updated.</p>
+<p>If the request is successful, the <em>JSON</em> response will show the updated <strong>domain</strong> information and the <code>query</code> field will be set to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: PATCH
+
+URL: https://&lt;manager_IP&gt;/api/v1/sensors/86348645?auth_token=&lt;API_key&gt;
+
+Payload:
+
+{
+    &quot;name&quot;: &quot;new_name&quot;
+}
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+  &quot;query&quot;: true,
+  &quot;sensor&quot;: {
+    &quot;name&quot;: &quot;new_name&quot;,
+    ...
+  }
+}
+</code></pre></div>
+</details>
+<h3 id="modification-of-flow-mse-and-meraki-sensors">Modification of Flow, MSE, and Meraki Sensors<a class="headerlink" href="#modification-of-flow-mse-and-meraki-sensors" title="Permanent link">&para;</a></h3>
+<p>Updating Flow, MSE, and Meraki sensors uses the same parameters as in their creation. All sensor properties will be updated with the new values. The request payload must be in <em>JSON</em> format, and the <code>PATCH</code> request should be made to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/&lt;sensor_uuid&gt;/&lt;type&gt;/?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>The <code>type</code> parameter should be replaced with the type of sensor to update (<code>flow</code>, <code>mse</code>, or <code>meraki</code>).</p>
+<p>If the request is successful, the <em>JSON</em> response will show the updated <strong>sensor</strong> information and the <code>query</code> field will be set to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: PATCH
+
+URL: https://&lt;manager_IP&gt;/api/v1/sensors/86348645/flow?auth_token=&lt;API_key&gt;
+
+Payload:
+
+{
+    &quot;name&quot;: &quot;flow_new&quot;
+}
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+  &quot;query&quot;: true,
+  &quot;sensor&quot;: {
+    ...
+  }
+}
+</code></pre></div>
+</details>
+<h3 id="overwriting-a-domain">Overwriting a Domain<a class="headerlink" href="#overwriting-a-domain" title="Permanent link">&para;</a></h3>
+<p>If desired, a domain (referred to as the "main sensor") can be completely replaced with the content provided in the request payload. The request payload must be in <em>JSON</em> format and must have a single root tag "sensor" describing the content of the "main sensor" to be replaced. To avoid errors, the UUID value of the "main sensor" cannot be changed. Subdomains can be set using the <code>children</code> value, allowing for inheritance. Multiple levels of inheritance are permitted.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>There are a few important points to consider:</p>
+<ul>
+<li>If <code>sensor_uuid</code> is not present in the URL, the sensor to be overwritten is the user's main domain.</li>
+<li>If a child of the main sensor does not have a defined UUID, the <em>API</em> attempts to find a matching child based on the <code>name</code>, <code>domain_type</code>, and <code>type</code> parameters. If the <em>API</em> finds a match, it will update it; otherwise, it will create a new sensor.</li>
+<li>Access Points ignore the <code>sensor_name</code> and <code>sensor_uuid</code> parameters. All APs of a sensor will be added to it.</li>
+<li>If a sensor needs to be created and the <code>type</code> or <code>domain_type</code> parameters are not present in the <em>JSON</em>, the default values are <code>DOMAIN</code> and <code>GENERIC</code>, respectively.</li>
+<li>If there is an error in creating/updating sensors, the application will undo all changes.</li>
+</ul>
+</div>
+<p>If the "main sensor" or a child is a domain or a flow sensor, it can contain a list of associated access points. To describe these access points, you can use the <code>access_points</code> value. If this value is found in an element that is neither a flow sensor nor a domain, it will be ignored.</p>
+<p>The usual rules for creating access points and domains apply, with the exception of primary IDs (<code>sensor_id</code> and <code>switch_id</code> for access points; <code>parent_id</code> for domains), which are not allowed since inheritance is described through JSON nesting.</p>
+<p>This request can be executed by issuing a <code>POST</code> request to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/&lt;sensor_uuid&gt;/override_all/?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>Where <code>sensor_uuid</code> should be replaced with the UUID of the domain to be overwritten.</p>
+<p>Alternatively, you can leave the <code>sensor_uuid</code> field blank. In this case, the domain to be overwritten is the top domain (main domain) of the user owning the <code>auth_token</code> specified in the request:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/override_all/?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>If the request is successful, the <em>JSON</em> response will show the <code>query</code> field set to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: POST
+
+URL: https://&lt;manager_IP&gt;/api/v1/sensors/697893457705749905/override_all?auth_token=&lt;API_key&gt;
+
+Payload:
+
+{
+  &quot;sensor&quot;: {
+            &quot;name&quot;: &quot;Override_parent&quot;,
+            &quot;domain_type&quot;: &quot;1&quot;,
+            &quot;children&quot;: [
+                {
+                    &quot;name&quot;: &quot;Override_child&quot;,
+                    &quot;domain_type&quot;: &quot;1&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Override_child_2&quot;,
+                    &quot;domain_type&quot;: &quot;1&quot;,
+                    &quot;children&quot;: [
+                        {
+                            &quot;name&quot;: &quot;Override_grandson_1&quot;,
+                            &quot;domain_type&quot;: &quot;5&quot;,
+                            &quot;access_points&quot;: [
+                                {
+                                    &quot;mac_address&quot;: &quot;22:ca:cc:dd:ff:11&quot;,
+                                    &quot;name&quot;: &quot;Demo AP_Flow1&quot;
+                                },
+                                {
+                                    &quot;mac_address&quot;: &quot;11:22:cc:ab:ff:ea&quot;,
+                                    &quot;name&quot;: &quot;Demo AP_Flow2&quot;
+                                }
+                            ]
+                        },
+                        {
+                            &quot;name&quot;: &quot;Override_grandson_2&quot;,
+                            &quot;domain_type&quot;: &quot;101&quot;,
+                            &quot;access_points&quot;: [
+                                {
+                                    &quot;mac_address&quot;: &quot;bb:ca:cc:bd:af:22&quot;,
+                                    &quot;name&quot;: &quot;Demo AP1&quot;
+                                },
+                                {
+                                    &quot;mac_address&quot;: &quot;11:22:ac:dd:ff:44&quot;,
+                                    &quot;name&quot;: &quot;Demo AP2&quot;
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+    }
+}
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+&quot;query&quot;: &quot;true&quot;
+}
+</code></pre></div>
+</details>
+<h2 id="working-with-access-points">Working with Access Points<a class="headerlink" href="#working-with-access-points" title="Permanent link">&para;</a></h2>
+<h3 id="listing-the-access-points">Listing the Access Points<a class="headerlink" href="#listing-the-access-points" title="Permanent link">&para;</a></h3>
+<p>You can obtain a list of all access points that the user has access to by making a <code>GET</code> request to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/access_points.&lt;format&gt;?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>Where <code>format</code> should be the desired response format, either <code>csv</code> or <code>json</code>.</p>
+<p>It is also possible to filter access points by certain available fields. This filtering can be done by sending additional <code>GET</code> parameters. These parameters are:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mac_address</td>
+<td>MAC address of the access point to filter by.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Numeric representation of the access point status ("<code>1</code>"=up, "<code>0</code>"=down).</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Name of the access point.</td>
+</tr>
+<tr>
+<td>ip_address</td>
+<td>IP address of the access point to filter by.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/access_points.&lt;format&gt;?auth_token=&lt;API_key&gt;&amp;mac_address=&lt;mac_address&gt;&amp;name=&lt;name&gt;
+</code></pre></div>
+<p>If the request is successful, the response will include the requested list of access points and the <code>query</code> field set to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example with a <em>JSON</em> response:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: GET
+
+URL: https://&lt;manager_IP&gt;/api/v1/access_points.json?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+  &quot;query&quot;: true,
+  &quot;access_points&quot;: [
+    {
+      &quot;name&quot;: &quot;AP1&quot;,
+      &quot;service_provider_uuid&quot;: null,
+      &quot;service_provider&quot;: null,
+      &quot;deployment_uuid&quot;: null,
+      &quot;deployment&quot;: null,
+      &quot;organization_uuid&quot;: &quot;9201452791072897388&quot;,
+      &quot;organization&quot;: &quot;Eneo&quot;,
+      &quot;market_uuid&quot;: &quot;6396049722605916538&quot;,
+      &quot;market&quot;: &quot;Spain&quot;,
+      &quot;building_uuid&quot;: &quot;6913104531464819392&quot;,
+      &quot;building&quot;: &quot;Aljarafe Center&quot;,
+      &quot;campus_uuid&quot;: &quot;3118246207405350091&quot;,
+      &quot;campus&quot;: &quot;SVQ&quot;,
+      &quot;floor_uuid&quot;: &quot;9032532605146231448&quot;,
+      &quot;mac_address&quot;: &quot;12:15:14:16:15:aa&quot;,
+      &quot;status&quot;: 0,
+      &quot;last_check_in&quot;: null,
+      &quot;enrichment&quot;: {}
+    },
+    {
+      &quot;name&quot;: &quot;AP2&quot;,
+      &quot;service_provider_uuid&quot;: null,
+      &quot;service_provider&quot;: null,
+      &quot;deployment_uuid&quot;: null,
+      &quot;deployment&quot;: null,
+      &quot;organization_uuid&quot;: &quot;9201452791072897388&quot;,
+      &quot;organization&quot;: &quot;Eneo&quot;,
+      &quot;market_uuid&quot;: &quot;6396049722605916538&quot;,
+      &quot;market&quot;: &quot;Spain&quot;,
+      &quot;building_uuid&quot;: &quot;6913104531464819392&quot;,
+      &quot;building&quot;: &quot;Aljarafe Center&quot;,
+      &quot;campus_uuid&quot;: &quot;3118246207405350091&quot;,
+      &quot;campus&quot;: &quot;SVQ&quot;,
+      &quot;floor_uuid&quot;: &quot;9032532605146231448&quot;,
+      &quot;mac_address&quot;: &quot;aa:aa:aa:cc:cc:cc&quot;,
+      &quot;status&quot;: 0,
+      &quot;last_check_in&quot;: null,
+      &quot;enrichment&quot;: {}
+    },
+    {
+      &quot;name&quot;: &quot;AP3&quot;,
+      &quot;service_provider_uuid&quot;: null,
+      &quot;service_provider&quot;: null,
+      &quot;deployment_uuid&quot;: null,
+      &quot;deployment&quot;: null,
+      &quot;organization_uuid&quot;: &quot;9201452791072897388&quot;,
+      &quot;organization&quot;: &quot;Eneo&quot;,
+      &quot;market_uuid&quot;: &quot;6396049722605916538&quot;,
+      &quot;market&quot;: &quot;Spain&quot;,
+      &quot;building_uuid&quot;: &quot;6913104531464819392&quot;,
+      &quot;building&quot;: &quot;Aljarafe Center&quot;,
+      &quot;campus_uuid&quot;: &quot;3118246207405350091&quot;,
+      &quot;campus&quot;: &quot;SVQ&quot;,
+      &quot;floor_uuid&quot;: &quot;9032532605146231448&quot;,
+      &quot;mac_address&quot;: &quot;aa:bb:cc:dd:ee&quot;,
+      &quot;status&quot;: 0,
+      &quot;last_check_in&quot;: null,
+      &quot;enrichment&quot;: {}
+    }
+  ]
+}
+</code></pre></div>
+</details>
+<h3 id="creating-access-points">Creating Access Points<a class="headerlink" href="#creating-access-points" title="Permanent link">&para;</a></h3>
+<p>You can create new access points by making a <code>POST</code> request to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/access_points?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>To successfully create a new access point, it is necessary to provide a <code>sensor_uuid</code> (UUID of the sensor under which the new AP will be a descendant). If this parameter is not provided, an HTTP status code <code>404 Not Found</code> will be returned. Remember you can get the UUID from <strong>listing the sensors tree</strong>.</p>
+<p>Additionally, the user making the request must be able to manage the specified sensor. If the user does not have permission, an HTTP status code <code>401 Unauthorized</code> will be returned.</p>
+<p>Access points validate the name and MAC address during creation, so these parameters are mandatory. If either of these parameters is missing, an HTTP status code <code>422 Unprocessable Entity</code> will be returned along with the specific error in the requested format.</p>
+<p>The following parameters are accepted in the payload:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ip_address</td>
+<td>IP address of the access point to create.</td>
+</tr>
+<tr>
+<td>mac_address</td>
+<td>(Required) MAC address of the access point to create.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Name of the access point to create.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Numeric representation of the access point status ("<code>1</code>"=up, "<code>0</code>"=down).</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>Latitude coordinate to locate the access point.</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>Longitude coordinate to locate the access point.</td>
+</tr>
+<tr>
+<td>x</td>
+<td>Integer representing the x-coordinate on a floor map to locate the access point.</td>
+</tr>
+<tr>
+<td>y</td>
+<td>Integer representing the y-coordinate on a floor map to locate the access point.</td>
+</tr>
+<tr>
+<td>sensor_uuid</td>
+<td>(Required) UUID of the parent structure. Must always be a domain.</td>
+</tr>
+<tr>
+<td>flow_uuid</td>
+<td>UUID of the associated flow sensor.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Description of the access point to create.</td>
+</tr>
+<tr>
+<td>enrichment</td>
+<td>Extra parameters to enrich the information of the access point such as <code>market_uuid</code>, <code>campus_uuid</code>, <code>building_uuid</code>, or <code>floor_uuid</code>. These fields indicate where the access point to create belongs.</td>
+</tr>
+</tbody>
+</table>
+<p>If the request is successful, the <em>JSON</em> response will describe the <strong>access point</strong> created and the <code>query</code> field set to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example with a <em>JSON</em> response:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: POST
+
+URL: https://&lt;manager_IP&gt;/api/v1/access_points?auth_token=&lt;API_key&gt;
+
+Payload:
+
+{
+  &quot;mac_address&quot;: &quot;ed:f4:22:45:ff:ef&quot;,
+  &quot;enrichment&quot;: {
+    &quot;campus_uuid&quot;: &quot;84758975876475&quot;,
+    &quot;floor_uuid&quot;: &quot;8001483943459605430&quot;
+  },
+  &quot;sensor_uuid&quot;: &quot;5654545586888876551&quot;,
+  &quot;name&quot;: &quot;Demo_AP6&quot;,
+  &quot;flow_uuid&quot;: &quot;89479888298873783&quot;
+}
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+  &quot;query&quot;: true,
+  &quot;ap&quot;: {
+      &quot;id&quot;: 776,
+      &quot;ip_address&quot;: null,
+      &quot;mac_address&quot;: &quot;ed:f4:22:45:ff:ef&quot;,
+      &quot;name&quot;: &quot;Demo_Access_Point&quot;,
+      &quot;switch_name&quot;: null,
+      &quot;switch_id&quot;: null,
+      &quot;latitude&quot;: null,
+      &quot;longitude&quot;: null,
+      &quot;x&quot;: null,
+      &quot;y&quot;: null,
+      &quot;sensor_id&quot;: 265,
+      &quot;created_at&quot;: &quot;2015-06-02T11:33:54.841+02:00&quot;,
+      &quot;updated_at&quot;: &quot;2015-06-02T11:33:54.841+02:00&quot;,
+      &quot;description&quot;: null,
+      &quot;status&quot;: 0,
+      &quot;last_check_in&quot;: null,
+      &quot;clients&quot;: 0,
+      &quot;uptime&quot;: 0,
+      &quot;enrichment&quot;: {
+          &quot;campus_uuid&quot;: &quot;84758975876475&quot;,
+          &quot;floor_uuid&quot;: &quot;8001483943459605430&quot;
+      },
+      &quot;sensor_name&quot;: &quot;Restaurant&quot;,
+      &quot;sensor_uuid&quot;: &quot;5654545586888876551&quot;
+  }
+}
+</code></pre></div>
+</details>
+<h3 id="modifying-access-points">Modifying Access Points<a class="headerlink" href="#modifying-access-points" title="Permanent link">&para;</a></h3>
+<p>Existing access points can be modified by making a <code>PATCH</code> or <code>PUT</code> request to the following URLs:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/access_points/&lt;accesss_point_id&gt;
+https://&lt;manager_IP&gt;/api/v1/access_points/&lt;mac_address&gt;
+</code></pre></div>
+<p>Where <code>id</code> is the ID of the access point to modify. It is also possible to specify the access point to modify by including the MAC address of the access point instead of the ID.</p>
+<p>The parameters that can be modified are the same as those indicated in the <a href="/manager/redborder_api/ch11_model_sharing/#creating-access-points">Creating Access Points</a>, except for the <code>enrichment</code> field.</p>
+<p>If the request is successful, the <em>JSON</em> response will describe the modified <strong>access point</strong> and the <code>query</code> field set to <code>true</code>.</p>
+<h3 id="overriding-domains-access-points">Overriding Domain's Access Points<a class="headerlink" href="#overriding-domains-access-points" title="Permanent link">&para;</a></h3>
+<p>Similar to domain override, this action affects only the wireless access points contained within the specified domain.</p>
+<p>To perform this action, make a <code>POST</code> request to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/&lt;sensor_uuid&gt;/access_point/override/?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>Replace <code>sensor_uuid</code> with the UUID of the domain for which you want to override the access points.</p>
+<p>This request must include a payload as a non-nested JSON array describing the access points that the referenced domain and subdomains should contain. This payload must have the root label <code>access_points</code>. Once this request is sent, all access points in the specified domain and subdomains will be deleted.</p>
+<div class="admonition info">
+<p class="admonition-title">Please note...</p>
+<p>Access points can be located in the specified domain's subdomains by identifying the domain type (<code>service_provider</code>, <code>organization</code>, <code>deployment</code>, <code>namespace</code>) that contains them.</p>
+</div>
+<p>If a container domain is not specified, the access point will be created in the specified parent domain. Domains must be identified by their UUID and/or name, and you can use <code>&lt;domain_type&gt;_uuid</code> or <code>&lt;domain_type&gt;_name</code> tags for that purpose. These would be examples of the mentioned tags: <code>deployment_uuid</code>, <code>deployment_name</code>, <code>organization_uuid</code>, <code>organization_name</code>.</p>
+<p>If it is specified that the access point must be in a non-existent domain, <strong>this domain will be created</strong>. If you provided a name for this domain, it will be created with the provided name. If no name is provided, it will be created with a name matching <code>&lt;domain_type&gt;_&lt;uuid&gt;</code>, for example: <code>organization_2342356443333123</code>. If a domain is found by its name but the UUID does not match, <strong>the provided domain will be updated to match the given one</strong>. In addition, an enrichment field can be included in the access point values.</p>
+<p>If the request is successful, the <em>JSON</em> response will display the <code>query</code> field set to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example with a <em>JSON</em> response:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: POST
+
+URL: https://&lt;manager_IP&gt;/api/v1/sensors/697893457705749905/access_point/override?auth_token=&lt;API_key&gt;
+
+Payload:
+
+{
+  &quot;access_points&quot;: [
+    {
+      &quot;mac_address&quot;: &quot;ab:be:ef:22:11:33&quot;,
+      &quot;name&quot;: &quot;AP_with_alredy_created_structure&quot;,
+      &quot;deployment_uuid&quot;: &quot;8001483930459605430&quot;
+    },
+    {
+      &quot;mac_address&quot;: &quot;ab:be:ef:12:21:33&quot;,
+      &quot;name&quot;: &quot;AP_create_structure&quot;,
+      &quot;deployment_uuid&quot;: &quot;8001483943659605430&quot;
+    },
+    {
+      &quot;mac_address&quot;: &quot;ab:12:ef:12:21:33&quot;,
+      &quot;name&quot;: &quot;AP_create_structure_with_name&quot;,
+      &quot;deployment_uuid&quot;: &quot;8001483943459605430&quot;,
+      &quot;deployment_name&quot;: &quot;Deployment_APs&quot;
+    },
+    {
+      &quot;mac_address&quot;: &quot;ab:be:ef:f2:aa:33&quot;,
+      &quot;name&quot;: &quot;AP_with_given_existing_name&quot;,
+      &quot;deployment_name&quot;: &quot;Deployment_APs&quot;
+    },
+    {
+      &quot;mac_address&quot;: &quot;ab:be:ef:be:ef:33&quot;,
+      &quot;name&quot;: &quot;AP_with_complex_hierarchy_partially_existent&quot;,
+      &quot;deployment_uuid&quot;: &quot;8301483941239605130&quot;,
+      &quot;deployment_name&quot;: &quot;Deployment_APs&quot;,
+      &quot;enrichment&quot;: {&quot;market_uuid&quot;: &quot;3189960848665445691&quot;}
+    },
+    {
+      &quot;mac_address&quot;: &quot;ab:22:ef:33:ef:13&quot;,
+      &quot;name&quot;: &quot;AP_with_complex_hierarchy_completely_unexistant&quot;,
+      &quot;deployment_uuid&quot;: &quot;8301483941239605130&quot;,
+      &quot;deployment_name&quot;: &quot;Deployment_APs&quot;,
+      &quot;enrichment&quot;: {&quot;market_uuid&quot;: &quot;3189234848665445691&quot;,&quot;building_name&quot;: &quot;NewBuilding&quot;,}
+    }
+  ]
+}
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+&quot;query&quot;: &quot;true&quot;
+}
+</code></pre></div>
+</details>
+<h3 id="access-points-deletion">Access Points deletion<a class="headerlink" href="#access-points-deletion" title="Permanent link">&para;</a></h3>
+<p>Access points can be deleted through different actions according to the user's needs. If you want to delete a list of access points by providing their MAC address, regardless of their hierarchy, you can send a <code>DELETE</code> request to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/access_points
+</code></pre></div>
+<p>This request must be sent along with a <em>JSON</em> payload describing the array of access points you want to delete. Access points are identified by their MAC address or ID.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>To delete an access point, you need management permissions over those access points. If the requesting user lacks management permissions over some specified access points, those points will not be deleted, but <strong>no HTTP error code will be returned</strong>, as there might be other access points that the user can delete.</p>
+</div>
+<p>If the request is successful, the <em>JSON</em> response will describe the <code>query</code> field set to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example with a <em>JSON</em> response:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: DELETE
+
+URL: https://&lt;manager_IP&gt;/api/v1/access_points?auth_token=&lt;API_key&gt;
+
+Payload:
+
+{
+  &quot;access_points&quot;: [
+    { &quot;mac_address&quot;: &quot;ab:be:e4:22:a1:33&quot; },
+    { &quot;id&quot;: &quot;42&quot; },
+    { &quot;mac_address&quot;: &quot;ab:22:ef:33:ef:13&quot; }
+  ]
+}
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+  &quot;query&quot;: &quot;true&quot;
+}
+</code></pre></div>
+</details>
+<p>To delete all access points within a domain and its subdomains, a <code>DELETE</code> request should be sent to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/sensors/&lt;sensor_uuid&gt;/access_points
+</code></pre></div>
+<p>Where <code>sensor_uuid</code> should be replaced with the UUID of the domain from which the <strong>access points</strong> are to be deleted.</p>
+<p>If the request is successful, the JSON response will describe the <code>query</code> field set to <code>true</code>.</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: DELETE
+
+URL: https://&lt;manager_IP&gt;/api/v1/sensors/697893457705749905/access_points?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+  &quot;query&quot;: &quot;true&quot;
+}
+</code></pre></div>
+</details>
+<h2 id="user-listing">User Listing<a class="headerlink" href="#user-listing" title="Permanent link">&para;</a></h2>
+<p>The super administrator has the ability to list all existing users. To do this, a <code>GET</code> request must be made to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/users.&lt;format&gt;
+</code></pre></div>
+<p>Where <code>format</code> should be the desired format for the response, such as <code>csv</code> or <code>json</code>.</p>
+<p>If the user making the request is not a super administrator, the HTTP status code <code>401 Unauthorized</code> will be returned.</p>
+<p>If the request is successful, the JSON response will list all users registered on the platform and set the <code>query</code> field to <code>true</code>.</p>
+<p>Expand the following tab to see a complete execution example with a <em>JSON</em> response:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Method: GET
+
+URL: https://&lt;manager_IP&gt;/api/v1/users.json?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>Status Code: 200 OK
+
+Response Body:
+
+{
+  &quot;query&quot;: true,
+  &quot;users&quot;: [
+      {
+          &quot;id&quot;: 5,
+          &quot;email&quot;: &quot;user@redborder.net&quot;,
+          &quot;login&quot;: &quot;User&quot;,
+          &quot;admin&quot;: true,
+          &quot;name&quot;: &quot;John Doe&quot;,
+          &quot;enabled&quot;: true,
+          &quot;authentication_token&quot;: &quot;&lt;API_key&gt;&quot;,
+          &quot;sensor_id&quot;: 472,
+          &quot;sensor_name&quot;: &quot;Redborder&quot;,
+          &quot;sensor_uuid&quot;: &quot;4935760011107548256&quot;
+      },
+      {
+          &quot;id&quot;: 6,
+          &quot;email&quot;: &quot;user@redborder.net&quot;,
+          &quot;login&quot;: &quot;User&quot;,
+          &quot;admin&quot;: true,
+          &quot;name&quot;: &quot;John Doe&quot;,
+          &quot;enabled&quot;: true,
+          &quot;authentication_token&quot;: &quot;&lt;API_key&gt;&quot;,
+          &quot;sensor_id&quot;: 472,
+          &quot;sensor_name&quot;: &quot;Redborder&quot;,
+          &quot;sensor_uuid&quot;: &quot;4935760011107548256&quot;
+      },
+      {
+          &quot;id&quot;: 7,
+          &quot;email&quot;: &quot;user@redborder.net&quot;,
+          &quot;login&quot;: &quot;User&quot;,
+          &quot;admin&quot;: false,
+          &quot;name&quot;: &quot;User&quot;,
+          &quot;enabled&quot;: true,
+          &quot;authentication_token&quot;: &quot;&lt;API_key&gt;&quot;,
+          &quot;sensor_id&quot;: 1,
+          &quot;sensor_name&quot;: &quot;root&quot;,
+          &quot;sensor_uuid&quot;: &quot;2584761509592299795&quot;
+      },
+      {
+          &quot;id&quot;: 11,
+          &quot;email&quot;: &quot;user@redborder.net&quot;,
+          &quot;login&quot;: &quot;User&quot;,
+          &quot;admin&quot;: false,
+          &quot;name&quot;: &quot;John Doe&quot;,
+          &quot;enabled&quot;: true,
+          &quot;authentication_token&quot;: &quot;&lt;API_key&gt;&quot;,
+          &quot;sensor_id&quot;: 260,
+          &quot;sensor_name&quot;{
+  &quot;query&quot;: &quot;true&quot;
+}17729975087448&quot;
+      },
+      {
+          &quot;id&quot;: 1,
+          &quot;email&quot;: &quot;admin@redborder.net&quot;,
+          &quot;login&quot;: &quot;admin&quot;,
+          &quot;admin&quot;: true,
+          &quot;name&quot;: &quot;Administrator&quot;,
+          &quot;enabled&quot;: true,
+          &quot;authentication_token&quot;: &quot;&lt;API_key&gt;&quot;,
+          &quot;sensor_id&quot;: 1,
+          &quot;sensor_name&quot;: &quot;root&quot;,
+          &quot;sensor_uuid&quot;: &quot;2584761509592299795&quot;
+      },
+      {
+          &quot;id&quot;: 4,
+          &quot;email&quot;: &quot;user@redborder.net&quot;,
+          &quot;login&quot;: &quot;User&quot;,
+          &quot;admin&quot;: true,
+          &quot;name&quot;: &quot;John Dow&quot;,
+          &quot;enabled&quot;: true,
+          &quot;authentication_token&quot;: &quot;&lt;API_key&gt;&quot;,
+          &quot;sensor_id&quot;: 1,
+          &quot;sensor_name&quot;: &quot;root&quot;,
+          &quot;sensor_uuid&quot;: &quot;2584761509592299795&quot;
+      },
+      {
+          &quot;id&quot;: 13,
+          &quot;email&quot;: &quot;user@redborder.net&quot;,
+          &quot;login&quot;: &quot;User&quot;,
+          &quot;admin&quot;: true,
+          &quot;name&quot;: &quot;John Dow&quot;,
+          &quot;enabled&quot;: true,
+          &quot;authentication_token&quot;: &quot;&lt;API_key&gt;&quot;,
+          &quot;sensor_id&quot;: 11,
+          &quot;sensor_name&quot;: &quot;Spain&quot;,
+          &quot;sensor_uuid&quot;: &quot;6396049722605916538&quot;
+      },
+      {
+          &quot;id&quot;: 12,
+          &quot;email&quot;: &quot;user@redborder.net&quot;,
+          &quot;login&quot;: &quot;User&quot;,
+          &quot;admin&quot;: false,
+          &quot;name&quot;: &quot;John Dow&quot;,
+          &quot;enabled&quot;: true,
+          &quot;authentication_token&quot;: &quot;&lt;API_key&gt;&quot;,
+          &quot;sensor_id&quot;: 2,
+          &quot;sensor_name&quot;: &quot;Adamo&quot;,
+          &quot;sensor_uuid&quot;: &quot;796168482310467136&quot;
+      }
+  ]
+}
+</code></pre></div>
+</details>
+<h2 id="api-key-renewal"><em>API</em> key Renewal<a class="headerlink" href="#api-key-renewal" title="Permanent link">&para;</a></h2>
+<p>Users can request a renewal of their authentication token by making a <code>GET</code> request to the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;manager_IP&gt;/api/v1/users/&lt;user_id&gt;/recreate_api_key
+</code></pre></div>
+<p>Where <code>user_id</code> should be replaced with the ID of the desired user.</p>
+<p>If the request is successful, the <em>JSON</em> response will contain the generated <strong>authentication token</strong> along with the <code>query</code> field set to <code>true</code>.</p>
+<p>Please deploy the following tab to see a complete execution example with a <em>JSON</em> response:</p>
+<details class="example">
+<summary>Complete Execution</summary>
+<p><strong>Request</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Action: GET
+
+URL: https://&lt;manager_IP&gt;/api/v1/users/1/recreate_api_key?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p><strong>Response</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP Status Code: 200 OK
+
+Response Body:
+
+{
+  &quot;query&quot;: true,
+  &quot;auth_token&quot;: &quot;abcdabcdabcd&quot;
+}
+</code></pre></div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Eneo Tecnología S.L
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/redBorder" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/redBorder" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://redborder.com" target="_blank" rel="noopener" title="redborder.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.action.edit", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../assets/js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../../assets/js/typewriter.js"></script>
+      
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

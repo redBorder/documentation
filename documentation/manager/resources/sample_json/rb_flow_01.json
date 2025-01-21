@@ -1,0 +1,17 @@
+{
+  "dataSource": "rb_flow",
+  "granularity": "all",
+  "intervals":["2024-08-27T04:00+00:00/2024-08-27T10:00+00:00"],
+  "queryType": "topN",
+  "aggregations": [
+    {"type": "longSum", "name": "bytes", "fieldName": "sum_bytes"}
+  ],
+  "dimension": [ "public_ip" ],
+  "filter":null,
+  "metric": "bytes",
+  "threshold":25,
+  "context": {
+    "timeout": 90000
+  },
+  "postAggregations": []
+}

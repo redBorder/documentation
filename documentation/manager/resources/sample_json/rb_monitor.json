@@ -1,0 +1,14 @@
+{
+  "dataSource": "rb_monitor",
+  
+  "granularity": {
+    "type": "period",
+    "period": "pt1m",
+    "origin": "2024-08-26T12:00:00Z"
+  },
+  "intervals": [
+    "2024-08-26T12:50:00+00:00/2024-08-26T13:50:00+00:00"
+  ],
+  "queryType": "groupBy",
+  "dimensions": [ "value", "sensor_name", "cpu" ]
+}

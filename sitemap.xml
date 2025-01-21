@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://docs.redborder.com/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/missing-translation/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/missing-translation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/missing-translation/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/flowgate/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/flowgate/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/flowgate/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/flowgate/installation/ch02_installation_on_linux/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/flowgate/installation/ch02_installation_on_linux/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/flowgate/installation/ch02_installation_on_linux/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/intrusion/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/intrusion/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/intrusion/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/intrusion/installation/ch02_installation_on_linux/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/intrusion/installation/ch02_installation_on_linux/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/intrusion/installation/ch02_installation_on_linux/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/apps/ch07_apps/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch07_apps/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch07_apps/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/apps/ch08_apps_menu/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch08_apps_menu/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch08_apps_menu/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/apps/ch09_views/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch09_views/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch09_views/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/apps/ch10_anomalies/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch10_anomalies/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch10_anomalies/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/apps/ch11_filters/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch11_filters/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch11_filters/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/apps/ch12_ip_search/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch12_ip_search/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch12_ip_search/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/apps/ch13_create_objects/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch13_create_objects/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch13_create_objects/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/dashboards/ch05_overview_and_default_dashboard/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/dashboards/ch05_overview_and_default_dashboard/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/dashboards/ch05_overview_and_default_dashboard/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/dashboards/ch06_dashboards_menu/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/dashboards/ch06_dashboards_menu/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/dashboards/ch06_dashboards_menu/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/dashboards/ch07_dashboards_actions/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/dashboards/ch07_dashboards_actions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/dashboards/ch07_dashboards_actions/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/dashboards/ch08_widgets_menu/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/dashboards/ch08_widgets_menu/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/dashboards/ch08_widgets_menu/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/dashboards/ch09_widgets_actions/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/dashboards/ch09_widgets_actions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/dashboards/ch09_widgets_actions/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/getting_started/ch03_sign_in_to_redborder_manager/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/getting_started/ch03_sign_in_to_redborder_manager/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/getting_started/ch03_sign_in_to_redborder_manager/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/getting_started/ch04_interface_overview/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/getting_started/ch04_interface_overview/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/getting_started/ch04_interface_overview/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/incidents/ch01_incidents_list/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/incidents/ch01_incidents_list/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/incidents/ch01_incidents_list/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/incidents/ch05_incident_details/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/incidents/ch05_incident_details/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/incidents/ch05_incident_details/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/incidents/ch21_incident_stats/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/incidents/ch21_incident_stats/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/incidents/ch21_incident_stats/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/installation/ch02_installation_on_linux/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/installation/ch02_installation_on_linux/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/installation/ch02_installation_on_linux/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/integrations/glpi/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/integrations/glpi/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/integrations/glpi/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/integrations/otrs/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/integrations/otrs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/integrations/otrs/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/integrations/rsyslog/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/integrations/rsyslog/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/integrations/rsyslog/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/integrations/sso/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/integrations/sso/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/integrations/sso/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/integrations/trend_micro/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/integrations/trend_micro/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/integrations/trend_micro/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/integrations/zabbix/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/integrations/zabbix/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/integrations/zabbix/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/reports/ch09_creation_reports/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/reports/ch09_creation_reports/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/reports/ch09_creation_reports/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/reports/ch10_reports_history/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/reports/ch10_reports_history/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/reports/ch10_reports_history/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/resources/ch10_introduction/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/resources/ch10_introduction/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/resources/ch10_introduction/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/resources/ch10_use_examples/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/resources/ch10_use_examples/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/resources/ch10_use_examples/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/resources/ch11_model_sharing/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/resources/ch11_model_sharing/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/resources/ch11_model_sharing/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/resources/ch12_syslog_incidents_logs/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/resources/ch12_syslog_incidents_logs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/resources/ch12_syslog_incidents_logs/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/sensors/ch03_sensors_view/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/sensors/ch03_sensors_view/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/sensors/ch03_sensors_view/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/sensors/ch04_policies/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/sensors/ch04_policies/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/sensors/ch04_policies/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch01_alarms/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch01_alarms/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch01_alarms/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch02_audits/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch02_audits/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch02_audits/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch04_cluster_settings/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch04_cluster_settings/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch04_cluster_settings/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch05_general_settings/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch05_general_settings/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch05_general_settings/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch06_correlation_engine_rules/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch06_correlation_engine_rules/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch06_correlation_engine_rules/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch07_monitor_categories/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch07_monitor_categories/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch07_monitor_categories/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch09_mitre/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch09_mitre/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch09_mitre/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch10_licenses/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch10_licenses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch10_licenses/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch11_lookup_sources/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch11_lookup_sources/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch11_lookup_sources/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch12_objects/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch12_objects/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch12_objects/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch13_object_types/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch13_object_types/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch13_object_types/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch14_overlay_maps/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch14_overlay_maps/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch14_overlay_maps/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch17_platform_alerts/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch17_platform_alerts/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch17_platform_alerts/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch18_rule_versions/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch18_rule_versions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch18_rule_versions/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch19_users/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch19_users/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch19_users/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/manager/tools/ch20_worker_and_job_queue/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch20_worker_and_job_queue/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch20_worker_and_job_queue/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/use_cases/ch09_IP_tracking/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/use_cases/ch09_IP_tracking/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/use_cases/ch09_IP_tracking/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/use_cases/ch09_detect_brute_force/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/use_cases/ch09_detect_brute_force/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/use_cases/ch09_detect_brute_force/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/use_cases/ch09_detect_eternalblue/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/use_cases/ch09_detect_eternalblue/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/use_cases/ch09_detect_eternalblue/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/use_cases/ch09_ssh_brute_force_alert/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/use_cases/ch09_ssh_brute_force_alert/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/use_cases/ch09_ssh_brute_force_alert/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/documentation/use_cases/ch09_untangle_remote_info/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/use_cases/ch09_untangle_remote_info/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/use_cases/ch09_untangle_remote_info/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/release_notes/25_01/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/release_notes/25_01/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/release_notes/25_01/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/missing-translation/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/missing-translation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/missing-translation/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/flowgate/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/flowgate/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/flowgate/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/flowgate/installation/ch02_installation_on_linux/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/flowgate/installation/ch02_installation_on_linux/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/flowgate/installation/ch02_installation_on_linux/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/intrusion/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/intrusion/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/intrusion/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/intrusion/installation/ch02_installation_on_linux/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/intrusion/installation/ch02_installation_on_linux/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/intrusion/installation/ch02_installation_on_linux/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/apps/ch07_apps/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch07_apps/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch07_apps/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/apps/ch08_apps_menu/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch08_apps_menu/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch08_apps_menu/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/apps/ch09_views/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch09_views/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch09_views/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/apps/ch10_anomalies/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch10_anomalies/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch10_anomalies/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/apps/ch11_filters/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch11_filters/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch11_filters/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/apps/ch12_ip_search/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch12_ip_search/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch12_ip_search/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/apps/ch13_create_objects/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/apps/ch13_create_objects/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/apps/ch13_create_objects/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/dashboards/ch05_overview_and_default_dashboard/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/dashboards/ch05_overview_and_default_dashboard/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/dashboards/ch05_overview_and_default_dashboard/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/dashboards/ch06_dashboards_menu/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/dashboards/ch06_dashboards_menu/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/dashboards/ch06_dashboards_menu/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/dashboards/ch07_dashboards_actions/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/dashboards/ch07_dashboards_actions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/dashboards/ch07_dashboards_actions/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/dashboards/ch08_widgets_menu/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/dashboards/ch08_widgets_menu/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/dashboards/ch08_widgets_menu/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/dashboards/ch09_widgets_actions/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/dashboards/ch09_widgets_actions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/dashboards/ch09_widgets_actions/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/getting_started/ch03_sign_in_to_redborder_manager/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/getting_started/ch03_sign_in_to_redborder_manager/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/getting_started/ch03_sign_in_to_redborder_manager/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/getting_started/ch04_interface_overview/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/getting_started/ch04_interface_overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/getting_started/ch04_interface_overview/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/incidents/ch01_incidents_list/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/incidents/ch01_incidents_list/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/incidents/ch01_incidents_list/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/incidents/ch05_incident_details/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/incidents/ch05_incident_details/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/incidents/ch05_incident_details/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/incidents/ch21_incident_stats/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/incidents/ch21_incident_stats/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/incidents/ch21_incident_stats/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/installation/ch02_installation_on_linux/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/installation/ch02_installation_on_linux/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/installation/ch02_installation_on_linux/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/integrations/glpi/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/integrations/glpi/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/integrations/glpi/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/integrations/otrs/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/integrations/otrs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/integrations/otrs/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/integrations/rsyslog/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/integrations/rsyslog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/integrations/rsyslog/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/integrations/sso/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/integrations/sso/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/integrations/sso/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/integrations/trend_micro/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/integrations/trend_micro/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/integrations/trend_micro/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/integrations/zabbix/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/integrations/zabbix/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/integrations/zabbix/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/reports/ch09_creation_reports/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/reports/ch09_creation_reports/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/reports/ch09_creation_reports/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/reports/ch10_reports_history/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/reports/ch10_reports_history/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/reports/ch10_reports_history/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/resources/ch10_introduction/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/resources/ch10_introduction/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/resources/ch10_introduction/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/resources/ch10_use_examples/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/resources/ch10_use_examples/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/resources/ch10_use_examples/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/resources/ch11_model_sharing/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/resources/ch11_model_sharing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/resources/ch11_model_sharing/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/resources/ch12_syslog_incidents_logs/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/resources/ch12_syslog_incidents_logs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/resources/ch12_syslog_incidents_logs/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/sensors/ch03_sensors_view/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/sensors/ch03_sensors_view/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/sensors/ch03_sensors_view/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/sensors/ch04_policies/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/sensors/ch04_policies/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/sensors/ch04_policies/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch01_alarms/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch01_alarms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch01_alarms/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch02_audits/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch02_audits/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch02_audits/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch04_cluster_settings/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch04_cluster_settings/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch04_cluster_settings/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch05_general_settings/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch05_general_settings/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch05_general_settings/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch06_correlation_engine_rules/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch06_correlation_engine_rules/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch06_correlation_engine_rules/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch07_monitor_categories/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch07_monitor_categories/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch07_monitor_categories/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch09_mitre/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch09_mitre/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch09_mitre/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch10_licenses/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch10_licenses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch10_licenses/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch11_lookup_sources/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch11_lookup_sources/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch11_lookup_sources/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch12_objects/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch12_objects/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch12_objects/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch13_object_types/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch13_object_types/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch13_object_types/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch14_overlay_maps/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch14_overlay_maps/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch14_overlay_maps/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch17_platform_alerts/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch17_platform_alerts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch17_platform_alerts/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch18_rule_versions/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch18_rule_versions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch18_rule_versions/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch19_users/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch19_users/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch19_users/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/manager/tools/ch20_worker_and_job_queue/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/manager/tools/ch20_worker_and_job_queue/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/manager/tools/ch20_worker_and_job_queue/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/use_cases/ch09_IP_tracking/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/use_cases/ch09_IP_tracking/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/use_cases/ch09_IP_tracking/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/use_cases/ch09_detect_brute_force/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/use_cases/ch09_detect_brute_force/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/use_cases/ch09_detect_brute_force/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/use_cases/ch09_detect_eternalblue/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/use_cases/ch09_detect_eternalblue/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/use_cases/ch09_detect_eternalblue/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/use_cases/ch09_ssh_brute_force_alert/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/use_cases/ch09_ssh_brute_force_alert/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/use_cases/ch09_ssh_brute_force_alert/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/documentation/use_cases/ch09_untangle_remote_info/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/documentation/use_cases/ch09_untangle_remote_info/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/documentation/use_cases/ch09_untangle_remote_info/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/release_notes/25_01/</loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/release_notes/25_01/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/release_notes/25_01/"/>
+    </url>
+</urlset>

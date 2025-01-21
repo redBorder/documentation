@@ -1,0 +1,13 @@
+{
+  "dataSource": "rb_flow",
+  "granularity": "all",
+  "intervals":["2024-08-27T04:00/2024-08-27T10:00"],
+  "queryType": "groupBy",
+  "aggregations": [
+    {"type": "longSum", "name": "events", "fieldName": "events"}
+  ],
+  "dimensions": [ "client", "client_mac", "darklist_category", "darklist_direction", "direction", "duration",
+   "ip_protocol_version", "lan", "lan_ip", "lan_l4_port", "public_ip", "sensor_ip", "type", "wan_ip", 
+   "wan_l4_port", "namespace", "namespace_uuid", "organization", "organization_uuid", "product_name"
+  ]
+}

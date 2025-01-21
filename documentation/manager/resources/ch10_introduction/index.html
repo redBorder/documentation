@@ -1,0 +1,3517 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.redborder.com/documentation/manager/resources/ch10_introduction/">
+      
+      
+        <link rel="prev" href="../../integrations/zabbix/">
+      
+      
+        <link rel="next" href="../ch10_use_examples/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/redborder-logo-white-crop-u4409.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Introduction to Redborder's API - Redborder NDR Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-redborders-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Redborder NDR Documentation" class="md-header__button md-logo" aria-label="Redborder NDR Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/redborder-logo-white-crop-u4409.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redborder NDR Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction to Redborder's API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../es/documentation/manager/resources/ch10_introduction/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/redBorder/redborder-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Redborder/redborder-documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Redborder NDR
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../release_notes/25_01/" class="md-tabs__link">
+          
+  
+  Release notes
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Redborder NDR Documentation" class="md-nav__button md-logo" aria-label="Redborder NDR Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/redborder-logo-white-crop-u4409.png" alt="logo">
+
+    </a>
+    Redborder NDR Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/redBorder/redborder-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Redborder/redborder-documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redborder NDR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Manager
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Manager
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Redborder Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/ch02_installation_on_linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation on Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/ch03_sign_in_to_redborder_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sign In to Redborder Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/ch04_interface_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interface Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4" id="__nav_2_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dashboards
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Dashboards
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/ch05_overview_and_default_dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview and Default Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/ch06_dashboards_menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboards Menu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/ch07_dashboards_actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboard Actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/ch08_widgets_menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets Menu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboards/ch09_widgets_actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets Actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Incidents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Incidents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../incidents/ch01_incidents_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incidents List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../incidents/ch05_incident_details/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incident Details
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../incidents/ch21_incident_stats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incident Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_6" id="__nav_2_1_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Apps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Apps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch07_apps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apps Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch08_apps_menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apps Menu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch09_views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apps Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch10_anomalies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anomaly Detection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch11_filters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch12_ip_search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IP search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/ch13_create_objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_7" id="__nav_2_1_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reports
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Reports
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/ch09_creation_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/ch10_reports_history/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Report History
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_8" id="__nav_2_1_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sensors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            Sensors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sensors/ch03_sensors_view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sensors View
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sensors/ch04_policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intrusion Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_9" id="__nav_2_1_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch01_alarms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alarms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch02_audits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch04_cluster_settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cluster Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch05_general_settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch06_correlation_engine_rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Correlation Engine Rules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch07_monitor_categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitor Categories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch09_mitre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mitre matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch10_licenses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licenses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch11_lookup_sources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lookup Sources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch12_objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch13_object_types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Object Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch14_overlay_maps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overlay Maps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch17_platform_alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch18_rule_versions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rule Versions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch19_users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ch20_worker_and_job_queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Worker and Job Queue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_10" id="__nav_2_1_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Integrations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/glpi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GLPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/otrs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OTRS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/rsyslog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syslog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/sso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Single Sign On
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/trend_micro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trend Micro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/zabbix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zabbix Integration Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_11" id="__nav_2_1_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Introduction to Redborder's API
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Redborder's API
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSON parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimensions-for-rb_flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions for rb_flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensions-for-rb_event" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions for rb_event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensions-for-rb_monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions for rb_monitor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensions-for-rb_state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions for rb_state
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selector" class="md-nav__link">
+    <span class="md-ellipsis">
+      selector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      regex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-expression-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Expression Filters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch10_use_examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example queries to the API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch11_model_sharing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing Database Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch12_syslog_incidents_logs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syslog Incident Logs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Intrusion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Intrusion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intrusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Redborder Intrusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intrusion/installation/ch02_installation_on_linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation on Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Flowgate
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Flowgate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../flowgate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Redborder Flowgate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../flowgate/installation/ch02_installation_on_linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation on Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Use Cases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Use Cases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use_cases/ch09_IP_tracking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tracking an IP with Redborder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use_cases/ch09_detect_brute_force/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSH Brute-Force Attacks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use_cases/ch09_detect_eternalblue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Detecting an Eternalblue Attack with Redborder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use_cases/ch09_ssh_brute_force_alert/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Brute force authentication attack alert
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use_cases/ch09_untangle_remote_info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reviewing remote information from Untangle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Release notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Release notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release_notes/25_01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release 25.01
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSON parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimensions-for-rb_flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions for rb_flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensions-for-rb_event" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions for rb_event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensions-for-rb_monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions for rb_monitor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensions-for-rb_state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions for rb_state
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selector" class="md-nav__link">
+    <span class="md-ellipsis">
+      selector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      regex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-expression-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Expression Filters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/redBorder/redborder-documentation/edit/master/docs/documentation/manager/resources/ch10_introduction.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="introduction-to-redborders-api">Introduction to Redborder's API<a class="headerlink" href="#introduction-to-redborders-api" title="Permanent link">&para;</a></h1>
+<p>The full <em>API</em> uses a <em>HTTP REST</em> style via <em>HTTPS</em> web interface. The query must be expressed in <em>JSON</em> format to specify which the desired values. For example:</p>
+<div class="admonition example">
+<p class="admonition-title">Query to the <em>API</em></p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;dataSource&quot;: &quot;rb_flow&quot;,
+  &quot;granularity&quot;: &quot;all&quot;,
+  &quot;namespace_uuids&quot;: [&quot;2584761509592299795&quot;],
+  &quot;intervals&quot;:[&quot;2013-11-21T19:07/2013-11-21T19:30&quot;],
+  &quot;queryType&quot;: &quot;groupBy&quot;,
+  &quot;aggregations&quot;: [
+    {&quot;type&quot;: &quot;longSum&quot;, &quot;name&quot;: &quot;events&quot;, &quot;fieldName&quot;: &quot;events&quot;}
+  ],
+  &quot;dimensions&quot;: [ &quot;http_host&quot;, &quot;src&quot;, &quot;http_user_agent&quot; ],
+  &quot;filter&quot;: {
+    &quot;type&quot;: &quot;and&quot;,
+    &quot;fields&quot;: [
+      { &quot;type&quot;: &quot;selector&quot;, &quot;dimension&quot;: &quot;client_mac&quot;, &quot;value&quot;: &quot;8c:58:77:0b:56:fc&quot; },
+      { &quot;type&quot;: &quot;regex&quot;, &quot;dimension&quot;: &quot;src&quot;, &quot;pattern&quot;: &quot;^10\\.13\\.&quot; }
+    ]
+  }
+}
+</code></pre></div>
+</div>
+<p>The query will return something similar to this (the output has been truncated):</p>
+<div class="admonition example">
+<p class="admonition-title"><em>API</em>'s output</p>
+<div class="highlight"><pre><span></span><code>[
+  {
+    &quot;version&quot;:&quot;v1&quot;,
+    &quot;timestamp&quot;:&quot;2013-11-21T19:07:00.000Z&quot;,
+    &quot;event&quot;:{
+      &quot;count&quot;:198,
+      &quot;http_user_agent&quot;:null,
+      &quot;http_host&quot;:null,
+      &quot;src&quot;:&quot;10.13.209.147&quot;
+    }
+  },
+  {
+    &quot;version&quot;:&quot;v1&quot;,
+    &quot;timestamp&quot;:&quot;2013-11-21T19:07:00.000Z&quot;,
+    &quot;event&quot;:{
+      &quot;count&quot;:1,
+      &quot;http_user_agent&quot;:&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11B511 [FBAN/FBIOS;FBAV/6.7;FBBV/566055;FBDV/iPhone3,3;FBMD/iPhone;FBSN/iPhone OS;FBSV/7.0.3;FBSS/2; FBCR/Verizon;FBID/phone;FBLC/en_US;FBOP/5]&quot;,
+      &quot;http_host&quot;:&quot;ajax.googleapis.com&quot;,
+      &quot;src&quot;:&quot;10.13.209.147&quot;
+    }
+  },
+  {
+    &quot;version&quot;:&quot;v1&quot;,
+    &quot;timestamp&quot;:&quot;2013-11-21T19:07:00.000Z&quot;,
+    &quot;event&quot;: {
+      &quot;count&quot;:1,
+      &quot;http_user_agent&quot;:&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11B511 [FBAN/FBIOS;FBAV/6.7;FBBV/566055;FBDV/iPhone3,3;FBMD/iPhone;FBSN/iPhone OS;FBSV/7.0.3;FBSS/2; FBCR/Verizon;FBID/phone;FBLC/en_US;FBOP/5]&quot;,
+      &quot;http_host&quot;:&quot;busymockingbird.files.wordpress.com&quot;,
+      &quot;src&quot;:&quot;10.13.209.147&quot;
+    }
+  },
+  {
+    &quot;version&quot;:&quot;v1&quot;,
+    &quot;timestamp&quot;:&quot;2013-11-21T19:07:00.000Z&quot;,
+    &quot;event&quot;:{
+      &quot;count&quot;:1,
+      &quot;http_user_agent&quot;:&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11B511 [FBAN/FBIOS;FBAV/6.7;FBBV/566055;FBDV/iPhone3,3;FBMD/iPhone;FBSN/iPhone OS;FBSV/7.0.3;FBSS/2; FBCR/Verizon;FBID/phone;FBLC/en_US;FBOP/5]&quot;,
+      &quot;http_host&quot;:&quot;connect.facebook.net&quot;,
+      &quot;src&quot;:&quot;10.13.209.147&quot;
+    }
+  }
+]
+</code></pre></div>
+</div>
+<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
+<p>The <em>Rest API</em> uses an <strong>Access Key</strong> generated with the <strong>Web Graphical Interface</strong>. To obtain this key, you need to click on your username in the <strong>Configuration Area</strong>, located on the right side of the <strong>Menu Bar</strong>. Here, you will see the space indicating the access key.</p>
+<p><a class="glightbox" href="../images/ch10_img001.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="User Settings: *API* Access Key" src="../images/ch10_img001.png" /></a></p>
+<p>User Settings: <em>API</em> Access Key</p>
+<p>This option should be included in the URL of the <em>API</em> request.</p>
+<div class="highlight"><pre><span></span><code>https://&lt;hostname&gt;/api/data?auth_token=&lt;API_key&gt;
+</code></pre></div>
+<p>Each <em>API</em> request must contain this access key, and the request will have the permissions associated with the user who owns the access key.</p>
+<p>The remaining parameters should be provided in the payload data of the <em>POST</em> request. The payload format should be <em>JSON</em>, as we saw in the previous example. For instance, if we save the last query in a file named <code>data.body</code>, we can make a simple request like this:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--insecure<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;https://&lt;hostname&gt;/api/data?auth_token=&lt;API_key&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s1">&#39;content-type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-d<span class="w"> </span>@&lt;input_json_path&gt;
+</code></pre></div>
+<h2 id="json-parameters"><em>JSON</em> parameters<a class="headerlink" href="#json-parameters" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dataSource</td>
+<td>Database being accessed.</td>
+</tr>
+<tr>
+<td>namespace_uuids</td>
+<td>Array of one or more values. Should contain the <em>UUIDs</em> of the <em>Namespace</em> where the data will be searched. If not specified, the default <em>dataSource</em> will be used.</td>
+</tr>
+<tr>
+<td>granularity</td>
+<td>Specifies the size of the <em>bucket</em> for values.</td>
+</tr>
+<tr>
+<td>intervals</td>
+<td>Specifies the time range(s) of the request. The interval must be specified in ISO format and may include the timezone if desired.</td>
+</tr>
+<tr>
+<td>queryType</td>
+<td>Specifies which type of query operator to use.</td>
+</tr>
+<tr>
+<td>aggregations</td>
+<td>Array of one or more values. These fields apply to the columns specified by <em>fieldName</em>, and the output of the aggregations will be named according to the value in the <em>name</em> field.</td>
+</tr>
+<tr>
+<td>metric</td>
+<td>(Only for requests with <em>queryType</em> of <em>topN</em>) Must be the same value as specified in <em>aggregations</em>. Used for sorting.</td>
+</tr>
+<tr>
+<td>dimensions</td>
+<td>(Only for requests with <em>queryType</em> of <em>groupBy</em> or <em>timeseries</em>) Array of zero or more values. These are used to restrict grouping. If empty, one value per time granularity bucket is requested in <em>groupBy</em>.</td>
+</tr>
+<tr>
+<td>dimension</td>
+<td>(Only for requests with <em>queryType</em> of <em>topN</em>) Single value. All available dimensions can be found later on this page.</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>Specifies the filter for the request. Available filters can be found later on this page.</td>
+</tr>
+<tr>
+<td>threshold</td>
+<td>(Only for requests with <em>queryType</em> of <em>topN</em>) Single value. Limits the number of values returned in <em>topN</em> requests.</td>
+</tr>
+<tr>
+<td>orderBy</td>
+<td>(Only for requests with <em>queryType</em> of <em>groupBy</em>).</td>
+</tr>
+</tbody>
+</table>
+<p>To see the different values that the fields can take, expand the corresponding tabs:</p>
+<details class="note">
+<summary><code>dataSource</code></summary>
+<ul>
+<li><code>rb_flow</code>: <em>Netflow/sFlow</em> database with traffic data.</li>
+<li><code>rb_state</code>: health status of wireless stations obtained via <em>NMSP</em>.</li>
+<li><code>rb_event</code>: <em>IDS/IPS</em> database with intrusion data.</li>
+<li><code>rb_monitor</code>: <em>SNMP</em> monitoring database.</li>
+</ul>
+</details>
+<details class="note">
+<summary><code>granularity</code></summary>
+<p>It can be a predefined interval such as <code>second</code>, <code>minute</code>, <code>fifteen_minute</code>, <code>thirty_minute</code>, <code>hour</code>, or <code>day</code>.</p>
+<p>It can also be an expression like <code>{"type": "period", "period":"PT6m"}</code> which means "6-minute <em>buckets</em>".</p>
+<p>In the example, it is set to the special value <code>all</code>, meaning all data points are grouped into the same time <em>bucket</em>.</p>
+</details>
+<details class="note">
+<summary><code>queryType</code></summary>
+<ul>
+<li><code>groupBy</code>: this is the most flexible type of query but can also have poorer performance.</li>
+<li><code>topN</code>: similar to <code>groupBy</code> queries but groups and sorts by a single dimension. This is much faster than <code>groupBy</code>.</li>
+<li><code>timeseries</code>: used for generating time series using specified aggregators.</li>
+</ul>
+</details>
+<details class="note">
+<summary><code>aggregations</code></summary>
+<p>There are different aggregators depending on the <code>dataSource</code> used:</p>
+<ul>
+<li>
+<p><code>rb_flow</code></p>
+<ol>
+<li><code>{type: "longSum", name: "events", fieldName: "events"}</code> -&gt; flow count / occurrences</li>
+<li><code>{type: "longSum", name: "pkts", fieldName: "sum_pkts"}</code> -&gt; sum of packets</li>
+<li><code>{type: "longSum", name: "bytes", fieldName: "sum_bytes"}</code> -&gt; sum of bytes</li>
+</ol>
+</li>
+<li>
+<p><code>rb_event</code></p>
+<ol>
+<li><code>{type: "longSum", name: "events", fieldName: "events"}</code> -&gt; IDS/IPS event count / occurrences</li>
+</ol>
+</li>
+<li>
+<p><code>rb_monitor</code></p>
+<ol>
+<li><code>{type: "longSum", name: "events", fieldName: "events"}</code> -&gt; result of monitored item within specified interval</li>
+<li><code>{type: "min", name: "min", fieldName: "min_value"}</code> -&gt; minimum value for monitored parameter</li>
+<li><code>{type: "max", name: "max", fieldName: "max_value"}</code> -&gt; maximum value for monitored parameter</li>
+</ol>
+</li>
+</ul>
+</details>
+<details class="note">
+<summary><code>orderBy</code></summary>
+<p>This parameter has the following fields:</p>
+<p><code>{"type":"default","limit":25,"columns":[{"dimension":"bytes","direction":"DESCENDING"}]}</code></p>
+</details>
+<h3 id="dimensions-for-rb_flow">Dimensions for <code>rb_flow</code><a class="headerlink" href="#dimensions-for-rb_flow" title="Permanent link">&para;</a></h3>
+<p>Within <code>rb_flow</code> we have <em>Netflow</em> and <em>sFlow</em> data, so we will find the information typically found in the <strong>Traffic</strong> module through the web interface.</p>
+<p>To see a list of available dimensions, expand the following tab:</p>
+<details class="info">
+<summary>Dimensions</summary>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>application_id_name</td>
+<td>darklist_category</td>
+<td>https_common_name</td>
+<td>namespace</td>
+<td>tos</td>
+</tr>
+<tr>
+<td>building</td>
+<td>darklist_direction</td>
+<td>interface_name</td>
+<td>namespace_uuid</td>
+<td>type</td>
+</tr>
+<tr>
+<td>building_uuid</td>
+<td>darklist_score_name</td>
+<td>ip_as_name</td>
+<td>organization</td>
+<td>url</td>
+</tr>
+<tr>
+<td>campus</td>
+<td>darklist_score</td>
+<td>ip_country_code</td>
+<td>organization_uuid</td>
+<td>wan_interface_description</td>
+</tr>
+<tr>
+<td>campus_uuid</td>
+<td>deployment</td>
+<td>ip_protocol_version</td>
+<td>product_name</td>
+<td>wan_interface_name</td>
+</tr>
+<tr>
+<td>client_accounting_type</td>
+<td>deployment_uuid</td>
+<td>l4_proto</td>
+<td>public_ip</td>
+<td>wan_ip</td>
+</tr>
+<tr>
+<td>client_auth_type</td>
+<td>direction</td>
+<td>lan_interface_description</td>
+<td>public_ip_mac</td>
+<td>wan_ip_as_name</td>
+</tr>
+<tr>
+<td>client_fullname</td>
+<td>dot11_protocol</td>
+<td>lan_interface_name</td>
+<td>referer</td>
+<td>wan_ip_country_code</td>
+</tr>
+<tr>
+<td>client_gender</td>
+<td>dot11_status</td>
+<td>lan_ip</td>
+<td>referer_l2</td>
+<td>wan_ip_map</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>dst_map</td>
+<td>lan_ip_as_name</td>
+<td>scatterplot</td>
+<td>wan_ip_net_name</td>
+</tr>
+<tr>
+<td>client_latlong</td>
+<td>duration</td>
+<td>lan_ip_country_code</td>
+<td>selector_name</td>
+<td>wan_l4_port</td>
+</tr>
+<tr>
+<td>client_loyality</td>
+<td>engine_id_name</td>
+<td>lan_ip_name</td>
+<td>sensor_ip</td>
+<td>wan_name</td>
+</tr>
+<tr>
+<td>client_mac</td>
+<td>floor</td>
+<td>lan_ip_net_name</td>
+<td>sensor_name</td>
+<td>wan_vlan</td>
+</tr>
+<tr>
+<td>client_mac_vendor</td>
+<td>floor_uuid</td>
+<td>lan_l4_port</td>
+<td>sensor_uuid</td>
+<td>wireless_id</td>
+</tr>
+<tr>
+<td>client_rssi</td>
+<td>host</td>
+<td>lan_name</td>
+<td>service_provider</td>
+<td>wireless_operator</td>
+</tr>
+<tr>
+<td>client_vip</td>
+<td>host_l2_domain</td>
+<td>lan_vlan</td>
+<td>service_provider_uuid</td>
+<td>wireless_station</td>
+</tr>
+<tr>
+<td>conversation</td>
+<td>http_social_media</td>
+<td>market</td>
+<td>src_map</td>
+<td>zone</td>
+</tr>
+<tr>
+<td>coordinates_map</td>
+<td>http_user_agent</td>
+<td>market_uuid</td>
+<td>tcp_flags</td>
+<td>zone_uuid</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="dimensions-for-rb_event">Dimensions for <code>rb_event</code><a class="headerlink" href="#dimensions-for-rb_event" title="Permanent link">&para;</a></h3>
+<p>Within <code>rb_event</code>, we have <em>IDS/IPS</em> data, so we will find the information typically found in the <strong>Intrusion</strong> module through the web interface.</p>
+<p>To see a list of available dimensions, expand the following tab:</p>
+<details class="info">
+<summary>Dimensions</summary>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action</td>
+<td>campus</td>
+<td>campus_uuid</td>
+<td>classification</td>
+<td>conversation</td>
+</tr>
+<tr>
+<td>building</td>
+<td>building_uuid</td>
+<td>darklist_category</td>
+<td>darklist_direction</td>
+<td>darklist_score</td>
+</tr>
+<tr>
+<td>darklist_score_name</td>
+<td>deployment</td>
+<td>deployment_uuid</td>
+<td>domain_name</td>
+<td>dst</td>
+</tr>
+<tr>
+<td>dst_as_name</td>
+<td>dst_country_code</td>
+<td>dst_map</td>
+<td>dst_net_name</td>
+<td>dst_port</td>
+</tr>
+<tr>
+<td>ethdst</td>
+<td>ethdst_vendor</td>
+<td>ethlength_range</td>
+<td>ethsrc</td>
+<td>ethsrc_vendor</td>
+</tr>
+<tr>
+<td>file_hostname</td>
+<td>file_size</td>
+<td>file_uri</td>
+<td>floor</td>
+<td>floor_uuid</td>
+</tr>
+<tr>
+<td>group_name</td>
+<td>icmptype</td>
+<td>incident_uuid</td>
+<td>iplen_range</td>
+<td>l4_proto</td>
+</tr>
+<tr>
+<td>market</td>
+<td>market_uuid</td>
+<td>msg</td>
+<td>namespace</td>
+<td>namespace_uuid</td>
+</tr>
+<tr>
+<td>organization</td>
+<td>organization_uuid</td>
+<td>priority</td>
+<td>rev</td>
+<td>scatterplot</td>
+</tr>
+<tr>
+<td>sensor_name</td>
+<td>service_provider</td>
+<td>service_provider_uuid</td>
+<td>sha256</td>
+<td>sig_generator</td>
+</tr>
+<tr>
+<td>sig_id</td>
+<td>src</td>
+<td>src_as_name</td>
+<td>src_country_code</td>
+<td>src_map</td>
+</tr>
+<tr>
+<td>src_net_name</td>
+<td>src_port</td>
+<td>tos</td>
+<td>ttl</td>
+<td>vlan</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="dimensions-for-rb_monitor">Dimensions for <code>rb_monitor</code><a class="headerlink" href="#dimensions-for-rb_monitor" title="Permanent link">&para;</a></h3>
+<p>Within <code>rb_monitor</code>, we have <em>SNMP</em> monitoring data, so we will find the information typically found in the <strong>Monitor</strong> module through the web interface.</p>
+<p>To see a list of available dimensions, expand the following tab:</p>
+<details class="info">
+<summary>Dimensions</summary>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>building</td>
+<td>campus</td>
+<td>deployment</td>
+<td>deployment_uuid</td>
+<td>floor</td>
+</tr>
+<tr>
+<td>building_uuid</td>
+<td>campus_uuid</td>
+<td>floor_uuid</td>
+<td>group_name</td>
+<td>instance</td>
+</tr>
+<tr>
+<td>market</td>
+<td>market_uuid</td>
+<td>monitor</td>
+<td>namespace</td>
+<td>namespace_uuid</td>
+</tr>
+<tr>
+<td>organization</td>
+<td>organization_uuid</td>
+<td>sensor_name</td>
+<td>sensor_uuid</td>
+<td>service_provider</td>
+</tr>
+<tr>
+<td>service_provider_uuid</td>
+<td>unit</td>
+<td>value</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="dimensions-for-rb_state">Dimensions for <code>rb_state</code><a class="headerlink" href="#dimensions-for-rb_state" title="Permanent link">&para;</a></h3>
+<p>Within <code>rb_state</code>, we have data on the health status of wireless stations obtained via SNMP.</p>
+<p>To see a list of available dimensions, expand the following tab:</p>
+<details class="info">
+<summary>Dimensions</summary>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>building</td>
+<td>building_uuid</td>
+<td>campus</td>
+<td>campus_uuid</td>
+<td>client_count</td>
+</tr>
+<tr>
+<td>deployment</td>
+<td>deployment_uuid</td>
+<td>floor</td>
+<td>floor_uuid</td>
+<td>market</td>
+</tr>
+<tr>
+<td>market_uuid</td>
+<td>namespace</td>
+<td>namespace_uuid</td>
+<td>organization</td>
+<td>organization_uuid</td>
+</tr>
+<tr>
+<td>sensor_name</td>
+<td>sensor_uuid</td>
+<td>service_provider</td>
+<td>service_provider_uuid</td>
+<td>status</td>
+</tr>
+<tr>
+<td>type</td>
+<td>wireless_admin_state</td>
+<td>wireless_channel</td>
+<td>wireless_mode</td>
+<td>wireless_op_state</td>
+</tr>
+<tr>
+<td>wireless_slot</td>
+<td>wireless_station</td>
+<td>wireless_station_ip</td>
+<td>wireless_station_name</td>
+<td>wireless_tx_power</td>
+</tr>
+<tr>
+<td>zone</td>
+<td>zone_uuid</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h2 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h2>
+<p>A filter is a <em>JSON</em> object that specifies which data rows should be included in the computation of a request. It is essentially equivalent to the WHERE clause in SQL, allowing filters to be used similarly to how you would use such a clause.</p>
+<h3 id="selector"><code>selector</code><a class="headerlink" href="#selector" title="Permanent link">&para;</a></h3>
+<p>The simplest filter is a <code>selector</code> filter. This filter matches a specific dimension with a specific value. Selector filters can be used as base filters for more complex boolean expressions of filters.</p>
+<div class="admonition example">
+<p class="admonition-title">Syntax for <code>selector</code> filter</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;type&quot;: &quot;selector&quot;,
+    &quot;dimension&quot;: &quot;client_mac&quot;,
+    &quot;value&quot;: &quot;8c:58:77:0b:56:fc&quot;
+}
+</code></pre></div>
+</div>
+<h3 id="regex"><code>regex</code><a class="headerlink" href="#regex" title="Permanent link">&para;</a></h3>
+<p>This filter is similar to the <code>selector</code> filter but uses regular expressions. It matches the specified dimension with the given pattern. The pattern can be any standard Java regular expression.</p>
+<div class="admonition example">
+<p class="admonition-title">Syntax for <code>regex</code> filter</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;type&quot;: &quot;regex&quot;,
+    &quot;dimension&quot;: &quot;application_id_name&quot;,
+    &quot;pattern&quot;: &quot;youtube&quot;            
+}
+</code></pre></div>
+</div>
+<h3 id="logical-expression-filters">Logical Expression Filters<a class="headerlink" href="#logical-expression-filters" title="Permanent link">&para;</a></h3>
+<p>It is possible to use logical expressions AND, OR, and NOT to combine filters or create more complex filters using the previously mentioned types.</p>
+<div class="admonition example">
+<p class="admonition-title">Syntax for <code>and</code> filter</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;type&quot;: &quot;and&quot;,
+    &quot;fields&quot;: [
+        {
+            &quot;type&quot;: &quot;selector&quot;,
+            &quot;dimension&quot;: &quot;client_mac&quot;,
+            &quot;value&quot;: &quot;8c:58:77:0b:56:fc&quot;
+        },
+        {
+            &quot;type&quot;: &quot;regex&quot;,
+            &quot;dimension&quot;: &quot;lan_ip&quot;,
+            &quot;pattern&quot;: &quot;^10\\.13\\.&quot;
+        }
+    ]
+}
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Syntax for <code>or</code> filter</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;type&quot;: &quot;or&quot;,
+    &quot;fields&quot;: [
+        {
+            &quot;type&quot;: &quot;selector&quot;,
+            &quot;dimension&quot;: &quot;client_mac&quot;,
+            &quot;value&quot;: &quot;8c:58:77:0b:56:fc&quot;
+        },
+        {
+            &quot;type&quot;: &quot;selector&quot;,
+            &quot;dimension&quot;: &quot;client_mac&quot;,
+            &quot;value&quot;: &quot;83:53:44:4b:56:fd&quot;
+        }
+    ]
+}
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Syntax for <code>not</code> filter</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;type&quot;: &quot;not&quot;, 
+    &quot;field&quot;: {
+        &quot;type&quot;: &quot;selector&quot;,
+        &quot;dimension&quot;: &quot;client_mac&quot;,
+        &quot;value&quot;: &quot;8c:58:77:0b:56:fc&quot;
+    }
+}
+</code></pre></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Eneo Tecnología S.L
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/redBorder" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/redBorder" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://redborder.com" target="_blank" rel="noopener" title="redborder.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.action.edit", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../assets/js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../../assets/js/typewriter.js"></script>
+      
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
